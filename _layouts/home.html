@@ -1,0 +1,104 @@
+---
+layout: default
+---
+<style>
+  .pubitem {
+  margin: 2em 0;
+  line-height: 1em;
+}
+
+.pubinfo{
+  margin-left: 250px;
+}
+
+.pubtitle {
+  margin-bottom: .5em;
+  line-height: 1.2em;
+  font-weight: bold;
+  margin-left: 250px;
+}
+
+.pubauthors, .pubinfo {
+  font-size: 75%;
+  margin-bottom: .75em;
+  margin-left: 250px;
+}
+.pubteaser {
+  clear: both;
+}
+
+.pubteaser a {
+  float: left;
+  margin-right: 2em;
+}
+
+.pubteaser img {
+  width: 200px;
+  border: 2px solid black;
+}
+.publinks {
+  margin-left: 250px;
+  font-size: 75%;
+}
+
+.tab { margin-left: 250px; 
+  font-size: 100%;
+}
+</style>
+
+{%- include parse-theme-options.html -%}
+
+{%- if page.collection and page.collection != "" -%}
+  {%- assign _collection = site.collections | where: "label" , page.collection | first -%}
+{%- else -%}
+  {%- assign _collection = site.collections | where: "label" , "sections" | first -%}
+{%- endif -%}
+{%- assign _sections = _collection.docs |sort: 'order' -%}
+{%- include header.html items_nav=_sections -%}
+{%- assign _output= _collection.output | default: false -%}
+<!-- Main -->
+<div id="main">
+	{%- if page.content != "" -%}
+		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+	{%- endif -%}
+	<!-- Sections -->
+	{% assign sorted = _sections | sort: 'year' | reverse %}
+	{%- for _section in sorted -%}
+
+    {%- if _output  -%}
+      {%- capture _excerpt -%}<p>{{- _section.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
+      {%- capture _excerpt -%}<p>{{- _section.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
+      
+      
+      {%- capture _excerpt -%}<div class="pubitem">
+      <div class="pubteaser">
+      <a href="{{_section.url}}">
+        <img src="/images/{{ _section.slug }}_small.png" alt="{{_section.slug}} publication teaser"/>
+      </a>
+    </div>
+      <div class="pubtitle">
+        {{ _section.long_title }}
+      </div>
+      <div class="pubauthors">
+        {{ _section.authors }}
+      </div>
+      <div class="pubinfo">
+        {{ _section.publication }}, {{ _section.year}}
+      </div>
+      <div class="publinks">
+      <a href="/download/{{ _section.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+      <a href="{{- _section.url -}}"><i class="fas fa-link"></i> Project Page</a>&nbsp;&nbsp;
+      
+      </div>
+      <br>
+      <div class="tab"><a href="{{- _section.url -}}"> <p>&gt;&gt;read more&lt;&lt;</p> </a></div>
+      </div>
+      
+      {%- endcapture -%}
+      {%- assign _content = _excerpt | append: _link -%}
+      {%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_content collection= _collection.label categories= _section.categories linktofullpage=true alt_url=_section.slug -%}
+    {%- else -%}
+      {%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_section.content collection= _collection.label categories= _section.categories -%}
+    {%- endif -%}
+	{%- endfor -%}
+</div>

@@ -1,0 +1,90 @@
+---
+layout: default
+---
+{%- include parse-theme-options.html -%}
+{%- if page.collection and page.collection != "" -%}
+  {%- assign _collection = site.collections | where: "label" , page.collection | first -%}
+	{%- assign _sections = _collection.docs | sort: 'order' -%}
+{%- else -%}
+  {%- assign _collection = site.collections | where: "label" , "sections" | first -%}
+	{%- assign _sections = nil -%}
+{%- endif -%}
+{%- include header.html items_nav=_sections linktofullpage= true -%}
+
+
+<style>
+  .pubitem {
+  margin: 2em 0;
+  line-height: 1em;
+}
+
+.pubtitle {
+  margin-bottom: .5em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+.pubauthors, .pubinfo {
+  font-size: 75%;
+  margin-bottom: .75em;
+}
+.pubteaser {
+  clear: both;
+}
+
+.pubteaser a {
+  float: left;
+  margin-right: 2em;
+}
+
+.publication-teaser img {
+  width: 750px;
+  border: 2px solid black;
+}
+.publinks {
+  font-size: 75%;
+}
+.abstract {
+  font-style: normal;
+}
+
+</style>
+
+<!-- Main -->
+<div id="main">
+	<!-- Post -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><a href="{{- page.url -}}">{{- page.title -}}</a></h2>
+				<div class="publication-authors">
+    {{ page.authors }}
+  </div>
+  <div class="publication-info">
+    {{ page.publication }}, {{ page.year}}
+  </div>
+  <br><br>
+  <div class="publication-teaser">
+    <img src="/images/{{ page.slug }}.png" alt="project teaser"/>
+  </div>
+  <br>
+  </header>
+  <div class="abstract">
+    <h2 id="Abstract">Abstract</h2><br>
+    
+  {{ content }}
+  </div>
+  <h2 id="downloads">Links</h2>
+  <p>
+    <a href="/download/{{ page.slug }}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+    {% if page.slides %}
+    <a href="/download/{{ page.slug }}_slides.pdf"><i class="far fa-file-pdf"></i> Slides</a>&nbsp;&nbsp;
+    {% endif %}
+    <a href="/download/{{ page.slug }}.bib"><i class="far fa-file-alt"></i> BibTex</a>&nbsp;&nbsp;
+    {% if page.doi %}
+    <a href="{{ page.doi }}"><i class="fas fa-external-link-alt"></i> DOI</a>&nbsp;&nbsp;
+    {% endif %}
+  </p>
+	  </div>
+	</article>
+</div>

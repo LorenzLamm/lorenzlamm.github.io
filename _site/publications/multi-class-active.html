@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+Changes to improve functionality by Fernando Ariznavarreta | github.com/ariznaf
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="/publications/multi-class-active" /><!-- Title, description, author --><title>Multiclass Active Learning | Peng Lab - AI for Microscopy and Computational Pathology</title>
+  <meta name="description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+  <meta name="author" content="Lorenz Lamm" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Multiclass Active Learning | Peng Lab - AI for Microscopy and Computational Pathology" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/avatar.jpg" />
+  <meta property="og:url" content="/publications/multi-class-active" />
+  <meta property="og:site_name" content="Peng Lab" />
+  <meta property="og:description" content="This is the demo site for a Jekyll theme version of HTML5 UP&#39;s sleek, responsive site template Prologue." />
+
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/assets/js/skel.min.js" defer></script>
+  <script src="/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/assets/js/main.js" defer></script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: 'none',
+    tex2jax: {
+      inlineMath: [['$','$']],
+      displayMath: [['$$','$$']],
+      processEnvironments: false
+    },
+    // show equation numbers
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    'HTML-CSS': {
+      imageFont: null
+    }
+  });
+</script></head>
+<body><!-- get the label to use in read more links if one is configured in _config.yml --><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="/" id="home-link">
+    <span class="image avatar48"><img src="/assets/images/avatar.jpg" alt="Avatar of Lorenz Lamm" /></span>
+    <h1 id="title">Peng Lab</h1>
+    <p>AI for Microscopy and Computational Pathology</p>
+  </a>
+</div>
+<!-- NavRoot -->
+<nav id="nav">
+  <ul><li><a href="/" id="about-link">
+            <span class="icon fa-home">About</span>
+          </a></li><li><a href="/publications" id="publications-link">
+            <span class="icon fa-book">Publications</span>
+          </a></li><li><a href="/team" id="team-link">
+            <span class="icon fa-book">Team</span>
+          </a></li><li><a href="/blog" id="news-cv-link">
+            <span class="icon fa-pencil-alt">News / CV?</span>
+          </a></li></ul>
+</nav>
+<hr><!-- NavList -->
+  <nav id="nav">
+    <ul><li><a href="/publications/basic"id="basic-link" class="scrolly"><span class="icon xxx">BaSiC</span></a>
+    </li><li><a href="/publications/basic_2"id="basic-link" class="scrolly"><span class="icon xxx">BaSiC++</span></a>
+    </li><li><a href="/publications/color_normalization"id="color-normalization-sparse-stain-separation-link" class="scrolly"><span class="icon xxx">Color Normalization & Sparse Stain Separation</span></a>
+    </li><li><a href="/publications/multi-class-active"id="multiclass-active-learning-link" class="scrolly"><span class="icon xxx">Multiclass Active Learning</span></a>
+    </li><li><a href="/publications/multi-task-knn"id="multi-task-learning-of-a-deep-k-nn-network-link" class="scrolly"><span class="icon xxx">Multi-task Learning of a Deep K-NN Network</span></a>
+    </li></ul>
+  </nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://twitter.com/p_tingying" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li><li><a href="https://github.com/peng-lab" class="icon-b fa-github"><span class="label">GitHub</span></a></li><li><a href="lorenz.lamm@helmholtz-muenchen.de" class="icon fa-envelope"><span class="label">Email</span></a></li></ul>
+</div>
+</div>
+<style>
+  .pubitem {
+  margin: 2em 0;
+  line-height: 1em;
+}
+
+.pubtitle {
+  margin-bottom: .5em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+.pubauthors, .pubinfo {
+  font-size: 75%;
+  margin-bottom: .75em;
+}
+.pubteaser {
+  clear: both;
+}
+
+.pubteaser a {
+  float: left;
+  margin-right: 2em;
+}
+
+.publication-teaser img {
+  width: 750px;
+  border: 2px solid black;
+}
+.publinks {
+  font-size: 75%;
+}
+.abstract {
+  font-style: normal;
+}
+
+</style>
+
+<!-- Main -->
+<div id="main">
+	<!-- Post -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><a href="/publications/multi-class-active">Multiclass Active Learning</a></h2>
+				<div class="publication-authors">
+    Ario Sadafi, Niklas Koehler, Asya Makhro, Anna Bogdanova, Nassir Navab, Carsten Marr, Tingying Peng
+  </div>
+  <div class="publication-info">
+    Medical Image Computing and Computer Assisted Intervention – MICCAI 2019, 2019
+  </div>
+  <br><br>
+  <div class="publication-teaser">
+    <img src="/images/multi-class-active.png" alt="project teaser"/>
+  </div>
+  <br>
+  </header>
+  <div class="abstract">
+    <h2 id="Abstract">Abstract</h2><br>
+    
+  <p>The recent success of deep learning approaches relies partly on large amounts of well annotated training data. For natural images object annotation is easy and cheap. For biomedical images however, annotation crucially depends on the availability of a trained expert whose time is typically expensive and scarce. To ensure efficient annotation, only the most relevant objects should be presented to the expert. Currently, no approach exists that allows to select those for a multiclass detection problem. Here, we present an active learning framework that identifies the most relevant samples from a large set of not annotated data for further expert annotation. Applied to brightfield images of red blood cells with seven subtypes, we train a faster R-CNN for single cell identification and classification, calculate a novel confidence score using dropout variational inference and select relevant images for annotation based on (i) the confidence of the single cell detection and (ii) the rareness of the classes contained in the image. We show that our approach leads to a drastic increase of prediction accuracy with already few annotated images. Our original approach improves classification of red blood cell subtypes and speeds up the annotation. This important step in diagnosing blood diseases will profit from our framework as well as many other clinical challenges that suffer from the lack of annotated training data.</p>
+
+  </div>
+  <h2 id="downloads">Links</h2>
+  <p>
+    <a href="/download/multi-class-active.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+    
+    <a href="/download/multi-class-active.bib"><i class="far fa-file-alt"></i> BibTex</a>&nbsp;&nbsp;
+    
+    <a href="https://doi.org/10.1007/978-3-030-32239-7_76"><i class="fas fa-external-link-alt"></i> DOI</a>&nbsp;&nbsp;
+    
+  </p>
+	  </div>
+	</article>
+</div>
+<!-- Footer -->
+<div id="footer">
+
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;Peng Lab. All rights reserved.</li>
+    
+    <li>theme home: <a href="https://github.com/ariznaf/jekyll-theme-advanced-prologue">Ariznaf jekyll themes</a></li>
+  </ul>
+
+</div>
+</body>
+</html>

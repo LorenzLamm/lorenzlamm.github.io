@@ -1,0 +1,22 @@
+{%- comment -%}
+  Include vars:
+  navtype: if set to 'categories' or 'tags', item_nav will be treated as a collection of bookmarks and use a bookmarkreference nav. In other case as a collection of sections and use a list nav.
+  items_nav: in case navtype is a collection of documents, and not categories or tags, pass here the collection of documents and let navtypes as null.
+  linktofullpage: if true, links are url to the full page, if false are slug bookmarks in current page
+{%- endcomment -%}
+
+<!-- Header -->
+<div id="header">
+  <div class="top">
+    {%- include logo.html -%}
+    {%- include navroot.html -%}
+    {%- if include.navtype == "categories" or include.navtype == "tags" -%}
+      {%- include navbookmarks.html -%}
+    {%- else -%}
+      {%- include navlist.html items_nav= include.items_nav linktofullpage= include.linktofullpage -%}
+    {%- endif -%}
+  </div>
+  <div class="bottom">
+    {%- include social_icons.html -%}
+  </div>
+</div>

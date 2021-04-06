@@ -1,0 +1,88 @@
+---
+layout: default
+---
+<style>
+  .pubitem {
+  margin: 2em 0;
+  line-height: 1em;
+}
+
+.pubtitle {
+  margin-bottom: .5em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+.pubauthors, .pubinfo {
+  font-size: 75%;
+  margin-bottom: .75em;
+}
+.pubteaser {
+  clear: both;
+}
+
+.pubteaser a {
+  float: left;
+  margin-right: 2em;
+}
+
+.pubteaser img {
+  width: 200px;
+  border: 2px solid black;
+}
+.publinks {
+  font-size: 75%;
+}
+</style>
+
+{%- include parse-theme-options.html -%}
+
+{%- if page.collection and page.collection != "" -%}
+  {%- assign _collection = site.collections | where: "label" , page.collection | first -%}
+{%- else -%}
+  {%- assign _collection = site.collections | where: "label" , "sections" | first -%}
+{%- endif -%}
+{%- assign _sections = _collection.docs |sort: 'order' -%}
+{%- include header.html items_nav=_sections -%}
+{%- assign _output= _collection.output | default: false -%}
+<!-- Main -->
+<div id="main">
+	{%- if page.content != "" -%}
+		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+	{%- endif -%}
+	<!-- Sections -->
+	{%- for _section in _sections -%}
+	{% assign publications = site.publications | reverse %}
+{% for pub in publications %}
+<div class="pubitem">
+  <div class="pubteaser">
+  <a href="{{pub.url}}">
+    <img src="/images/{{ pub.slug }}_small.png" alt="{{pub.slug}} publication teaser"/>
+  </a>
+</div>
+  <div class="pubtitle">
+    {{ pub.title }}
+  </div>
+  <div class="pubauthors">
+    {{ pub.authors }}
+  </div>
+  <div class="pubinfo">
+    {{ pub.publication }}, {{ pub.year}}
+  </div>
+  <div class="publinks">
+  <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+  <a href="{{pub.url}}"><i class="fas fa-link"></i> Project Page</a>
+</div>
+</div>
+{% endfor %}
+    {%- if _output  -%}
+      {%- capture _excerpt -%}<p>{{- _section.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
+      {%- capture _excerpt -%}<p>{{- _section.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
+      {%- capture _link -%}<a href="{{- _section.url -}}">{{- _themeOp_readmorelabel -}}</a>{%- endcapture -%}
+      {%- assign _content = _excerpt | append: _link -%}
+      {%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_content collection= _collection.label categories= _section.categories linktofullpage= true -%}
+    {%- else -%}
+      {%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_section.content collection= _collection.label categories= _section.categories -%}
+    {%- endif -%}
+	{%- endfor -%}
+</div>
