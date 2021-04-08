@@ -2,6 +2,7 @@
 layout: member
 name: Lorenz Lamm
 title: Lorenz Lamm
+order: 3
 position: phd
 topics: AI for Cryo-electron Tomography
 joined: 2020
@@ -13,4 +14,5 @@ googlescholar: g
 linkedin: l
 pic: /images/lorenz_small.png
 about: xyz
+icon: xxx
 ---

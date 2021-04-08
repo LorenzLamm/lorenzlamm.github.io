@@ -5,7 +5,7 @@ long_title: A BaSiC tool for background and shading correction of optical micros
 authors: Tingying Peng, Kurt Thorn, Timm Schroeder, Lichao Wang, Fabian J. Theis, Carsten Marr & Nassir Navab
 publication: Nature Communications
 year: 2017
-doi: 10.1038/ncomms14836
+doi: https://doi.org/10.1038/ncomms14836
 cover-photo: /images/basic_small.png
 photo: /images/test-pub_small.png
 photo-alt: description

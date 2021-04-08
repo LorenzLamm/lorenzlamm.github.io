@@ -32,12 +32,13 @@
   {%- if linktofullpage -%}
     {%- assign _linkurl= page.url -%}
   {%- else -%}
-    {%- assign _linkurl= _slug | prepend: '#' -%}
+    {%- assign _linkurl= "_slug" | prepend: '#' -%}
   {%- endif -%}
   {%- endif -%}
 	{%- capture _heading -%}
 		<header>
 			<h2>
+			  {%- if _linkurl != "_slug" -%}
         <a href= "{{ _linkurl }}">
         {%- if include.auto-header == null or include.auto-header == 'use-title' -%}
           {{- _title -}}
@@ -45,6 +46,15 @@
           {{- include.auto-header -}}
         {%- endif -%}
         </a>
+        {%- else -%}
+        {%- if include.auto-header == null or include.auto-header == 'use-title' -%}
+          {{- _title -}}
+        {%- else -%}
+          {{- include.auto-header -}}
+        {%- endif -%}
+        {%- endif -%}
+        
+        
       </h2>
       {%- if include.subtitle -%}<p>{{- include.subtitle -}}</p>{%- endif -%}
       {%- include categoriesbar.html collection= include.collection categories= include.categories -%}

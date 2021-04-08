@@ -4,7 +4,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: team
 title: Team
-icon: fa-book
 order: 1
 collection: people
+icon: "fa-users"
 ---

@@ -2,6 +2,7 @@
 layout: member
 name: Sophia Wagner
 title: Sophia Wagner
+order: 2
 position: phd
 topics: AI for Digital Pathology
 joined: 2020
@@ -13,4 +14,5 @@ researchgate:
 googlescholar:
 pic: /images/sophia_small.png
 about: xyz
+icon: xxx
 ---

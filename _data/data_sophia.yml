@@ -7,158 +7,114 @@ sidebar:
     education: True # set to False if you want education in main section instead of in sidebar
 
     # Profile information
-    name: Alan Doe
-    tagline: Full Stack Developer
-    avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+    name: Lorenz Lamm
 
-    # Sidebar links
-    email: hello@webjeda.com
-    phone: 012 345 6789
-    website: blog.webjeda.com #do not add http://
-    linkedin: alandoe
-    github: sharu725
-    telegram: # add your nickname without '@' sign
-    gitlab:
-    bitbucket:
-    twitter: '@webjeda'
-    stack-overflow: # Number/Username, e.g. 123456/alandoe
-    codewars:
-    goodreads: # Number-Username, e.g. 123456-alandoe
 
+    
     languages:
-      - idiom: French
+      - idiom: German
         level: Native
 
-      - idiom: French
+      - idiom: English
         level: Professional
 
       - idiom: Spanish
-        level: Professional
+        level: Un poquito
 
     interests:
-      - item: Climbing
+      - item: Beach Volleyball
         link:
 
-      - item: Snowboarding
+      - item: NBA
         link:
 
-      - item: Cooking
+      - item: Chess
         link:
+
+      - item: Flamingos
+        link:
+    research_interests:
+      - item: Deep Learning for noisy images
+        link:
+
+      - item: Cryo-Electron tomography
+        link:
+
+      - item: Computer Vision
+        link:
+
+      - item: Digital Pathology
+        link:
+     
 
 career-profile:
-    title: Career Profile
+    title: Profile
     summary: |
-      Wgus us ugh
-      Second paragraph if required.
+      I am a PhD student, shared between the Peng lab and the<a href="https://www.cellarchlab.com/"> Engel lab</a>. The aim of this PhD project is to develop Deep Learning methods to make the analysis of 3D Cryo-electron tomography more efficient.
+
+      As an application, we are analyzing plant cells, in particular those parts of the chloroplasts that are involved in photosynthesis. For this, we need to have accurate 3D segmentations of the thylakoid membranes, as well as precise localizations of the single proteins contained in these membranes, for example Photosystem-II complexes.
 education:
-    - degree: MSc in Computer Science
-      university: University of London
-      time: 2011 - 2012
+    - degree: MSc Mathematics (1.4)
+      university: Technical University Munich
+      time: 2017 - 2020
       details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
-    - degree: BSc in Applied Mathematics
-      university: Bristol University
-      time: 2007 - 2011
+        <i>Focus on mathematical foundations, as well as data science, in particular computer vision, machine learning and deep learning, and their application in biomedical settings.</i> <br>Excerpt of courses:
+        - Mathematical Foundations of Machine Learning
+        - Advanced Deep Learning For Computer Vision
+        - Computational Pathology: Algorithms and Applications
+        - Machine Learning / Convex Optimization for Computer Vision (2 courses)
+
+    - degree: BSc Mathematics (1.4)
+      university: University Regensburg
+      time: 2013 - 2016
       details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
+        <i>Learning the mathematical foundations, like Analysis (I-IV), (Linear) Algebra, Probability Theory, Numerics, ...</I> 
 experiences:
-    - role: Lead Developer
-      time: 2015 - Present
-      company: Startup Hubs, San Francisco
+    - role: PhD Student
+      time: 2020 - Present
+      company: Helmholtz AI / Helmholtz Pioneer Campus
       details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem. Nulla consequat massa quis
-        enim. Donec pede justo. Sed ut perspiciatis unde omnis iste natus
-        error sit voluptatem accusantium doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-        architecto beatae vitae dicta sunt explicabo.
-          - Bullet point
-          - Bullet point
-    - role: Senior Software Engineer
-      time: 2014 - 2015
-      company: Google, London
+        <i>Development of Deep Learning methods for the analysis of Cryo-electron tomography.</i>
+          - Computer Vision for 3D volumetric data
+          - Dealing with noisy, incomplete, sparsely labeled data
+    - role: Research Assistent
+      time: 2019 - 2020
+      company: Institute for Computational Biology, Helmholtz Zentrum München
       details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem.
-          - Bullet point
-          - Bullet point
-    - role: UI Developer
-      time: 2012 - 2014
-      company: Amazon, London
+        <p><I>Assisting Dr. Tingying Peng with the BaSiC shading correction tool.</i><ul>
+          <li>- Maintaining of code, solving user issues
+          <li>- Adding new functionalities (Java)
+          - Converting to new framework (from MatLab to Python)
+    - role: Business Analyst (Intern)
+      time: 2017 (3 months)
+      company: Mücke, Sturm and Company, München
       details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem.
-          - Bullet point
-          - Bullet point
+        <I>Internship in a management consulting company.</I>
+        * Acquisition of efficient working methods
+        * Learning of customer-based thinking
 projects:
-    title: Projects
-    intro: >
-      You can list your side projects or open source libraries in this
-      section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+    title: Projects and Collaborations
+    intro: 
     assignments:
-      - title: Velocity
-        link: "#hook"
-        tagline: "A responsive website template designed to help startups promote, market and sell their products."
+      - title: MemBrain
+        link:
+        tagline: "A Deep Learning-based pipeline for the automated detection of membrane-bound proteins in Cryo-Electron tomography"
 
-      - title: DevStudio
-        link: "#"
-        tagline: "A responsive website template designed to help web developers/designers market their services."
+      - title: ADL4CV
+        link: 
+        tagline: "In this university project for the course <i>Advanced Deep Learning for Computer Vision</i>, we re-implemented a point cloud semantic segmentation architecture (PointNet++) and investigated how this can benefit from adding information from 2D images showing the same scene."
 
-      - title: Tempo
-        link: "#"
-        tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
+      - title: Acne Detection
+        link: 
+        tagline: "Together with a Chinese company, I developed Deep Learning methods to automatically detect acne spots in human face images."
 
-      - title: Atom
-        link: "#"
-        tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
-
-      - title: Delta
-        link: "#"
-        tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
 
 publications:
     title: Publications
-    intro: |
-      You can list your publications in this section. Lorem ipsum dolor sit
-      amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
-      bibendum fringilla a eu lectus.
+    intro: 
     papers:
-      - title: The Art of Computer Programming
-        link: "#"
-        authors: Donald E. Knuth
-        conference: Addison-Wesley, 1968
+      - token: basic_2
 
-      - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
-        link: "#"
-        authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
-        conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
-
-      - title: A syntax directed compiler for Algol 60
-        link: "#"
-        authors: Edgar T. Irons
-        conference: "Comm. ACM 4 (1961), 51–55"
 
 
 footer: >

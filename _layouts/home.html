@@ -86,7 +86,7 @@ layout: default
         {{ _section.publication }}, {{ _section.year}}
       </div>
       <div class="publinks">
-      <a href={{_section.doi}}><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+      <a href={{_section.doi}}><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       {%- if _section.code -%} <a href="{{- _section.code -}}"><i class="fas fa-code"></i> Code</a>&nbsp;&nbsp; {%- endif -%}
       
       </div>
@@ -95,10 +95,16 @@ layout: default
       </div>
       
       {%- endcapture -%}
+      
+      {%- capture _ref_url -%}
+      publications/{{_section.slug}}
+      {%- endcapture -%}
       {%- assign _content = _excerpt | append: _link -%}
-      {%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_content collection= _collection.label categories= _section.categories linktofullpage=true alt_url=_section.slug -%}
+      
+      {%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_content collection= _collection.label categories= _section.categories linktofullpage=true alt_url=_ref_url -%}
     {%- else -%}
       {%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_section.content collection= _collection.label categories= _section.categories -%}
     {%- endif -%}
 	{%- endfor -%}
+	 
 </div>

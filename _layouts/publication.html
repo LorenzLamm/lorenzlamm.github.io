@@ -41,9 +41,7 @@ layout: default
   width: 750px;
   border: 2px solid black;
 }
-.publinks {
-  font-size: 75%;
-}
+
 .abstract {
   font-style: normal;
 }
@@ -56,7 +54,7 @@ layout: default
 	<article class="shade-two">
 	  <div class="container">
 			<header>
-				<h2><a href="{{- page.url -}}">{{- page.title -}}</a></h2>
+				<h2>{{- page.title -}}</h2>
 				<div class="publication-authors">
     {{ page.authors }}
   </div>
@@ -76,15 +74,18 @@ layout: default
   </div>
   <h2 id="downloads">Links</h2>
   <p>
+    <!--
     <a href="/download/{{ page.slug }}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
     {% if page.slides %}
     <a href="/download/{{ page.slug }}_slides.pdf"><i class="far fa-file-pdf"></i> Slides</a>&nbsp;&nbsp;
     {% endif %}
-    <a href="/download/{{ page.slug }}.bib"><i class="far fa-file-alt"></i> BibTex</a>&nbsp;&nbsp;
-    {% if page.doi %}
-    <a href="{{ page.doi }}"><i class="fas fa-external-link-alt"></i> DOI</a>&nbsp;&nbsp;
+    <a href="/download/{{ page.slug }}.bib"><i class="far fa-file-alt"></i> BibTex</a>&nbsp;&nbsp; -->
+    {% if page.doi %} 
+    <a href="{{page.doi}}"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     {% endif %}
+    {%- if page.code -%} <a href="{{- page.code -}}"><i class="fas fa-code"></i> Code</a>&nbsp;&nbsp; {%- endif -%}</div>
   </p>
-	  </div>
+
 	</article>
 </div>

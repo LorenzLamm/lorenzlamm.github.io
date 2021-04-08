@@ -53,6 +53,8 @@ career-profile:
       I am a PhD student, shared between the Peng lab and the<a href="https://www.cellarchlab.com/"> Engel lab</a>. The aim of this PhD project is to develop Deep Learning methods to make the analysis of 3D Cryo-electron tomography more efficient.
 
       As an application, we are analyzing plant cells, in particular those parts of the chloroplasts that are involved in photosynthesis. For this, we need to have accurate 3D segmentations of the thylakoid membranes, as well as precise localizations of the single proteins contained in these membranes, for example Photosystem-II complexes.
+
+
 education:
     - degree: MSc Mathematics (1.4)
       university: Technical University Munich
@@ -69,6 +71,8 @@ education:
       time: 2013 - 2016
       details: |
         <i>Learning the mathematical foundations, like Analysis (I-IV), (Linear) Algebra, Probability Theory, Numerics, ...</I> 
+
+
 experiences:
     - role: PhD Student
       time: 2020 - Present
@@ -92,6 +96,8 @@ experiences:
         <I>Internship in a management consulting company.</I>
         * Acquisition of efficient working methods
         * Learning of customer-based thinking
+
+
 projects:
     title: Projects and Collaborations
     intro: 
@@ -107,6 +113,7 @@ projects:
       - title: Acne Detection
         link: 
         tagline: "Together with a Chinese company, I developed Deep Learning methods to automatically detect acne spots in human face images."
+
 
 
 publications:

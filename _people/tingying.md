@@ -1,6 +1,7 @@
 ---
 layout: member
 name: Dr. Tingying Peng
+order: 1
 title: Dr. Tingying Peng
 position: groupleader
 topics: AI for Microscopy and Digital Pathology
@@ -13,4 +14,5 @@ researchgate:
 googlescholar:
 pic: /images/tingying_small.png
 about: xyz
+icon: xxx
 ---

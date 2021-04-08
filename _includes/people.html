@@ -53,13 +53,13 @@
 	{%- capture _heading -%}
 		<header>
 			<h2>
-        <a href= "{{ _linkurl }}">
+        
         {%- if include.auto-header == null or include.auto-header == 'use-title' -%}
           {{- _title -}}
         {%- else -%}
           {{- include.auto-header -}}
         {%- endif -%}
-        </a>
+      
       </h2>
       {%- if include.subtitle -%}<p>{{- include.subtitle -}}</p>{%- endif -%}
       {%- include categoriesbar.html collection= include.collection categories= include.categories -%}
