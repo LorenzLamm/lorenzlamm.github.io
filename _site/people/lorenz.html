@@ -1,0 +1,625 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+Changes to improve functionality by Fernando Ariznavarreta | github.com/ariznaf
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="/people/lorenz" /><!-- Title, description, author --><title>Lorenz Lamm | Peng Lab - AI for Microscopy and Computational Pathology</title>
+  <meta name="description" content="The Peng Lab, as part of Helmholtz AI, is working on the development of AI methods for various microscopy modalities and computational pathology.  " />
+  <meta name="author" content="Lorenz Lamm" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lorenz Lamm | Peng Lab - AI for Microscopy and Computational Pathology" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/avatar.jpg" />
+  <meta property="og:url" content="/people/lorenz" />
+  <meta property="og:site_name" content="Peng Lab" />
+  <meta property="og:description" content="The Peng Lab, as part of Helmholtz AI, is working on the development of AI methods for various microscopy modalities and computational pathology.  " />
+
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/assets/js/skel.min.js" defer></script>
+  <script src="/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/assets/js/main.js" defer></script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: 'none',
+    tex2jax: {
+      inlineMath: [['$','$']],
+      displayMath: [['$$','$$']],
+      processEnvironments: false
+    },
+    // show equation numbers
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    'HTML-CSS': {
+      imageFont: null
+    }
+  });
+</script></head>
+<body><!-- get the label to use in read more links if one is configured in _config.yml --><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="/" id="home-link">
+    <span class="image avatar48"><img src="/assets/images/avatar.jpg" alt="Avatar of Lorenz Lamm" /></span>
+    <h1 id="title">Peng Lab</h1>
+    <p>AI for Microscopy and Computational Pathology</p>
+  </a>
+</div>
+<!-- NavRoot -->
+<nav id="nav">
+  <ul><li><a href="/" id="about-link">
+            <span class="icon fa-home">About</span>
+          </a></li><li><a href="/pubs" id="publications-link">
+            <span class="icon fa-book">Publications</span>
+          </a></li><li><a href="/team" id="team-link">
+            <span class="icon fa-book">Team</span>
+          </a></li><li><a href="/blog" id="news-cv-link">
+            <span class="icon fa-pencil-alt">News / CV?</span>
+          </a></li></ul>
+</nav>
+<hr><!-- NavList -->
+  <nav id="nav">
+    <ul><li><a href="/people/lorenz"id="lorenz-lamm-link" class="scrolly"><span class="icon fa-file">Lorenz Lamm</span></a>
+    </li><li><a href="/people/sophia"id="sophia-wagner-link" class="scrolly"><span class="icon fa-file">Sophia Wagner</span></a>
+    </li><li><a href="/people/tingying"id="dr-tingying-peng-link" class="scrolly"><span class="icon fa-file">Dr. Tingying Peng</span></a>
+    </li></ul>
+  </nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://twitter.com/p_tingying" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li><li><a href="https://github.com/peng-lab" class="icon-b fa-github"><span class="label">GitHub</span></a></li><li><a href="lorenz.lamm@helmholtz-muenchen.de" class="icon fa-envelope"><span class="label">Email</span></a></li></ul>
+</div>
+</div>
+<style>
+  .pubitem {
+  margin: 2em 0;
+  line-height: 1em;
+}
+
+.pubteaser img {
+  width: 200px;
+  border: 2px solid black;
+}
+
+p + ul {
+    margin-top: -40px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    }
+
+.pubtitle {
+  margin-bottom: .5em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+.pubauthors, .pubinfo {
+  font-size: 75%;
+  margin-bottom: .75em;
+}
+.pubteaser {
+  clear: both;
+}
+
+.pubteaser a {
+  float: left;
+  margin-right: 2em;
+}
+
+.publication-teaser img {
+  width: 400px;
+  border: 2px solid black;
+}
+.publinks {
+  font-size: 75%;
+}
+.abstract {
+  font-style: normal;
+}
+.position: {
+  font-size: 10%;
+}
+
+.section-title, .container-block-title {
+  margin-bottom: 1cm;
+}
+
+</style>
+
+<!-- Main -->
+<div id="main">
+	<!-- Post -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><a href="/people/lorenz">Lorenz Lamm</a></h2>
+				<div class="publication-authors">
+    
+  </div>
+  <div class="position">PhD Student
+  </div>
+  <br><br>
+  <div class="publication-teaser">
+    <p style="float: left"><img src="/images/lorenz.png" alt="project teaser" style="margin: 30px"></p>
+      
+      <section class="section summary-section">
+      
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+          </span>
+          Profile
+        </h2>
+        <div class="summary">
+          <p>I am a PhD student, shared between the Peng lab and the<a href="https://www.cellarchlab.com/"> Engel lab</a>. The aim of this PhD project is to develop Deep Learning methods to make the analysis of 3D Cryo-electron tomography more efficient.</p>
+
+<p>As an application, we are analyzing plant cells, in particular those parts of the chloroplasts that are involved in photosynthesis. For this, we need to have accurate 3D segmentations of the thylakoid membranes, as well as precise localizations of the single proteins contained in these membranes, for example Photosystem-II complexes.</p>
+
+        </div><!--//summary-->
+          
+      </section><!--//section-->
+      
+  </div>
+  
+  <br>
+  </header>
+
+  
+
+  
+  
+  
+  <h2 id="downloads">Links</h2>
+
+   <div class="publinks"><a href=https://github.com/LorenzLamm><i class="fab fa-github"></i> GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=https://twitter.com/LammLorenz><i class="fab fa-twitter"></i> Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=s><i class="fab fa-researchgate"></i> ResearchGate</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=g><i class="fab fa-google"></i> Google Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=l><i class="fab fa-linkedin-in"></i> LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    </div>
+    </article>
+
+    <!--<section id="untitled" class="shade-two">
+  <div class="container">
+      
+      <section class="section summary-section">
+      
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+          </span>
+          Profile
+        </h2>
+        <div class="summary">
+          <p>I am a PhD student, shared between the Peng lab and the<a href="https://www.cellarchlab.com/"> Engel lab</a>. The aim of this PhD project is to develop Deep Learning methods to make the analysis of 3D Cryo-electron tomography more efficient.</p>
+
+<p>As an application, we are analyzing plant cells, in particular those parts of the chloroplasts that are involved in photosynthesis. For this, we need to have accurate 3D segmentations of the thylakoid membranes, as well as precise localizations of the single proteins contained in these membranes, for example Photosystem-II complexes.</p>
+
+        </div>
+          
+      </section>
+      </div>
+</section>--><section id="untitled" class="shade-three">
+  <div class="container">
+    
+    <div class="row">
+    <div class="column">
+    <div class="interests-container container-block">
+
+      <h2 class="container-block-title">
+        Research Interests
+      </h2>
+
+      <ul class="list-unstyled interests-list">
+        
+
+          
+          <li>Deep Learning for noisy images</li>
+          
+
+        
+
+          
+          <li>Cryo-Electron tomography</li>
+          
+
+        
+
+          
+          <li>Computer Vision</li>
+          
+
+        
+
+          
+          <li>Digital Pathology</li>
+          
+
+        
+      </ul>
+  
+    </div><!--//interests-->
+    
+    </div>
+    
+    
+    <div class="column">
+    <div class="interests-container container-block">
+
+      <h2 class="container-block-title">
+        Other Interests
+      </h2>
+
+      <ul class="list-unstyled interests-list">
+        
+
+          
+          <li>Beach Volleyball</li>
+          
+
+        
+
+          
+          <li>NBA</li>
+          
+
+        
+
+          
+          <li>Chess</li>
+          
+
+        
+
+          
+          <li>Flamingos</li>
+          
+
+        
+      </ul>
+
+    </div><!--//interests-->
+    </div>
+    </div>
+    
+    </div>
+</section><section id="untitled" class="shade-four">
+  <div class="container">
+    
+    <section class="section publications-section">
+
+      <h2 class="section-title">
+        <span class="fa-stack fa-xs">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
+        </span>
+        Publications
+      </h2>
+
+      
+
+      
+      <div class="pubitem">
+          <div class="pubteaser">
+          <a href="/publications/basic_2">
+            <img src="../images/basic_2_small.png" alt="basic_2 publication teaser"/>
+          </a>
+        </div>
+          <div class="pubtitle">
+            BaSiC++
+          </div>
+          <div class="pubauthors">
+            Tingying Peng, Lorenz Lamm, Dirk Loeffler, Nouraiz Ahmed, Nassir Navab, Timm Schroeder, Carsten Marr
+          </div>
+          <div class="pubinfo">
+            Medical Image Computing and Computer Assisted Intervention – MICCAI 2020, 2020
+          </div>
+          <div class="publinks">
+          <a href="/publications/basic_2">&lt;&lt; read more &gt;&gt;</a>
+        </div>
+        </div>
+      
+      
+      
+      
+
+    </section><!--//section-->
+    </div>
+</section><section id="untitled" class="shade-three">
+  <div class="container">
+    
+      <section class="section educations-section">
+
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-graduation-cap fa-stack-1x fa-inverse"></i>
+          </span>
+          Education
+        </h2>
+
+        
+        <div class="item">
+
+          <div class="meta">
+            
+            <div class="upper-row">
+              <h3 class="pubtitle" style="font-size: 120%">MSc Mathematics (1.4)</h3>
+              <div class="time">2017 - 2020</div>
+            </div><!--//upper-row-->
+
+            <div class="university" style="margin-bottom:0.3cm;">Technical University Munich</div>
+          </div><!--//meta-->
+
+          
+          <div class="details">
+            <p><i>Focus on mathematical foundations, as well as data science, in particular computer vision, machine learning and deep learning, and their application in biomedical settings.</i> <br />Excerpt of courses:</p>
+<ul>
+  <li>Mathematical Foundations of Machine Learning</li>
+  <li>Advanced Deep Learning For Computer Vision</li>
+  <li>Computational Pathology: Algorithms and Applications</li>
+  <li>Machine Learning / Convex Optimization for Computer Vision (2 courses)</li>
+</ul>
+
+          </div><!--//details-->
+          
+
+        </div><!--//item-->
+        
+        <div class="item">
+
+          <div class="meta">
+            
+            <div class="upper-row">
+              <h3 class="pubtitle" style="font-size: 120%">BSc Mathematics (1.4)</h3>
+              <div class="time">2013 - 2016</div>
+            </div><!--//upper-row-->
+
+            <div class="university" style="margin-bottom:0.3cm;">University Regensburg</div>
+          </div><!--//meta-->
+
+          
+          <div class="details">
+            <p><i>Learning the mathematical foundations, like Analysis (I-IV), (Linear) Algebra, Probability Theory, Numerics, …</i></p>
+
+          </div><!--//details-->
+          
+
+        </div><!--//item-->
+        
+
+      </section><!--//section-->
+    </div>
+</section><section id="untitled" class="shade-two">
+  <div class="container">
+    
+    <section class="section experiences-section">
+      <h2 class="section-title">
+        <span class="fa-stack fa-xs">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-briefcase fa-stack-1x fa-inverse"></i>
+        </span>
+        Experiences
+      </h2>
+
+      
+      <div class="item">
+
+        <div class="meta">
+
+          <div class="upper-row">
+            <h3 class="pubtitle" style="font-size: 120%">PhD Student</h3>
+            <div class="time">2020 - Present</div>
+          </div><!--//upper-row-->
+
+          <div class="company" style="margin-bottom:0.3cm;">Helmholtz AI / Helmholtz Pioneer Campus</div>
+
+        </div><!--//meta-->
+
+        
+        
+        <div class="details">
+          <p><i>Development of Deep Learning methods for the analysis of Cryo-electron tomography.</i></p>
+<ul>
+  <li>Computer Vision for 3D volumetric data</li>
+  <li>Dealing with noisy, incomplete, sparsely labeled data</li>
+</ul>
+
+        </div><!--//details-->
+        
+        
+
+      </div><!--//item-->
+      
+      <div class="item">
+
+        <div class="meta">
+
+          <div class="upper-row">
+            <h3 class="pubtitle" style="font-size: 120%">Research Assistent</h3>
+            <div class="time">2019 - 2020</div>
+          </div><!--//upper-row-->
+
+          <div class="company" style="margin-bottom:0.3cm;">Institute for Computational Biology, Helmholtz Zentrum München</div>
+
+        </div><!--//meta-->
+
+        
+        
+        <div class="details">
+          <p><i>Assisting Dr. Tingying Peng with the BaSiC shading correction tool.</i><ul>
+  <li>- Maintaining of code, solving user issues
+  <li>- Adding new functionalities (Java)
+  - Converting to new framework (from MatLab to Python)
+</li></li></ul></p>
+
+        </div><!--//details-->
+        
+        
+
+      </div><!--//item-->
+      
+      <div class="item">
+
+        <div class="meta">
+
+          <div class="upper-row">
+            <h3 class="pubtitle" style="font-size: 120%">Business Analyst (Intern)</h3>
+            <div class="time">2017 (3 months)</div>
+          </div><!--//upper-row-->
+
+          <div class="company" style="margin-bottom:0.3cm;">Mücke, Sturm and Company, München</div>
+
+        </div><!--//meta-->
+
+        
+        
+        <div class="details">
+          <p><i>Internship in a management consulting company.</i></p>
+<ul>
+  <li>Acquisition of efficient working methods</li>
+  <li>Learning of customer-based thinking</li>
+</ul>
+
+        </div><!--//details-->
+        
+        
+
+      </div><!--//item-->
+      
+
+    </section><!--//section-->
+    </div>
+</section><section id="untitled" class="shade-three">
+  <div class="container">
+    
+    <section class="section projects-section">
+
+      <h2 class="section-title">
+        <span class="fa-stack fa-xs">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
+        </span>
+        Projects and Collaborations
+      </h2>
+
+      
+
+      
+        <div class="item">
+
+          <span class="pubtitle" style="font-size: 100%">
+            
+            MemBrain
+            
+          </span>
+
+          
+          - <span class="project-tagline">A Deep Learning-based pipeline for the automated detection of membrane-bound proteins in Cryo-Electron tomography</span>
+          
+
+        </div><!--//item-->
+      
+        <div class="item">
+
+          <span class="pubtitle" style="font-size: 100%">
+            
+            ADL4CV
+            
+          </span>
+
+          
+          - <span class="project-tagline">In this university project for the course <i>Advanced Deep Learning for Computer Vision</i>, we re-implemented a point cloud semantic segmentation architecture (PointNet++) and investigated how this can benefit from adding information from 2D images showing the same scene.</span>
+          
+
+        </div><!--//item-->
+      
+        <div class="item">
+
+          <span class="pubtitle" style="font-size: 100%">
+            
+            Acne Detection
+            
+          </span>
+
+          
+          - <span class="project-tagline">Together with a Chinese company, I developed Deep Learning methods to automatically detect acne spots in human face images.</span>
+          
+
+        </div><!--//item-->
+      
+
+    </section><!--//section-->
+    </div>
+</section><section id="untitled" class="shade-four">
+  <div class="container">
+    
+    <div class="languages-container container-block">
+
+      <h2 class="container-block-title">
+        Languages
+      </h2>
+
+      <ul class="list-unstyled interests-list">
+        
+        <li>
+          German
+          <span class="lang-desc">(Native)</span>
+        </li>
+        
+        <li>
+          English
+          <span class="lang-desc">(Professional)</span>
+        </li>
+        
+        <li>
+          Spanish
+          <span class="lang-desc">(Un poquito)</span>
+        </li>
+        
+      </ul>
+
+    </div><!--//interests-->
+    </div>
+</section></div>
+	  
+	
+</div>
+
+
+
+<!-- Footer -->
+<div id="footer">
+
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;Peng Lab. All rights reserved.</li>
+    
+    <li>theme home: <a href="https://github.com/ariznaf/jekyll-theme-advanced-prologue">Ariznaf jekyll themes</a></li>
+  </ul>
+
+</div>
+</body>
+</html>

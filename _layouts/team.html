@@ -11,14 +11,21 @@ layout: default
   margin-left: 250px;
 }
 
-.pubtitle {
-  margin-bottom: .5em;
-  line-height: 1.2em;
-  font-weight: bold;
+.mem_topics {
+  font-size: 100%;
+  margin-bottom: .75em;
   margin-left: 250px;
 }
 
-.pubauthors, .pubinfo {
+.pubtitle, .mem_name {
+  margin-bottom: .1em;
+  line-height: 1.2em;
+  font-weight: bold;
+  margin-left: 250px;
+  font-size: 125%;
+}
+
+.mem_joined, .pubinfo {
   font-size: 75%;
   margin-bottom: .75em;
   margin-left: 250px;
@@ -56,21 +63,97 @@ layout: default
 {%- assign _sections = _collection.docs |sort: 'order' -%}
 {%- include header.html items_nav=_sections -%}
 {%- assign _output= _collection.output | default: false -%}
+
+
 <!-- Main -->
 <div id="main">
 	{%- if page.content != "" -%}
 		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
 	{%- endif -%}
 	<!-- Sections -->
-	{% assign sorted = _sections | sort: 'year' | reverse %}
-	{%- for _section in sorted -%}
-
-    {%- if _output  -%}
+	{% assign member_classes= "groupleader, postdoc, phd, student" | split: ", " %}
+	
+	{%- for mem_class in member_classes -%}
+    {%- assign mem_count=0 -%}
+  	{%- capture _excerpt -%}
+  	{% assign sorted = _sections | sort: 'year' | reverse %}
+  	{%- for _section in sorted -%}
+      {%- if _section.position == mem_class  -%}
+      {% assign mem_count=1 %}
+      
+      {%- if _section.position == "groupleader" -%}
+       {%- assign _title = "Group Leader" -%}
+      {%- endif -%}
+      {%- if _section.position == "postdoc" -%}
+       {%- assign _title = "Postdoc" -%}
+      {%- endif -%}
+      {%- if _section.position == "phd" -%}
+       {%- assign _title = "PhD Student" -%}
+      {%- endif -%}
+      {%- if _section.position == "student" -%}
+       {%- assign _title = "Student" -%}
+      {%- endif -%}
       
       
-     
-    {%- else -%}
-      {%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_section.content collection= _collection.label categories= _section.categories -%}
-    {%- endif -%}
+        <div class="pubitem">
+        <div class="pubteaser">
+        <a href="{{_section.url}}">
+          <img src="/images/{{ _section.slug }}_small.png" alt="{{_section.slug}} profile pic"/>
+        </a>
+      </div>
+      
+        <div class="mem_name">
+          {{ _section.name }}
+        </div>
+        <div class="mem_joined">
+          
+          {%- if _section.leave -%}
+           from {{_section.joined}} to {{_section.leave}}
+          {%- else -%}
+           since {{_section.joined}}
+          {%- endif -%}
+        </div>
+        <div class="mem_topics">
+          Topic:   &nbsp;&nbsp;{{_section.topics}}
+        </div>
+        <div class="publinks">
+        {%- if _section.github -%}
+         <a href={{_section.github}}><i class="fab fa-github"></i> GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        {%- endif -%}
+        
+        {%- if _section.twitter -%}
+         <a href={{_section.twitter}}><i class="fab fa-twitter"></i> Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        {%- endif -%}
+        
+        {%- if _section.researchgate -%}
+         <a href={{_section.researchgate}}><i class="fab fa-researchgate"></i> ResearchGate</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        {%- endif -%}
+        
+        {%- if _section.googlescholar -%}
+         <a href={{_section.googlescholar}}><i class="fab fa-google"></i> Google Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        {%- endif -%}
+        
+        {%- if _section.linkedin -%}
+         <a href={{_section.linkedin}}><i class="fab fa-linkedin-in"></i> LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        {%- endif -%}
+        
+        </div>
+        <br>
+        <div class="tab"><a href="{{- _section.url -}}"> <p>&gt;&gt;read more&lt;&lt;</p> </a></div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+      {%- endif -%}
+  	{%- endfor -%}
+  	{%- endcapture -%}
+  	{%- assign _content = _excerpt | append: _link -%}
+	{% if mem_count == 1 %}
+	 {%- include people.html class=mem_class photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_content collection= _collection.label categories= _section.categories linktofullpage=true alt_url=_section.slug -%}
+	{% endif %}
 	{%- endfor -%}
 </div>

@@ -1,0 +1,532 @@
+---
+layout: default
+collection: publications
+---
+{%- include parse-theme-options.html -%}
+{%- if page.collection and page.collection != "" -%}
+  {%- assign _collection = site.collections | where: "label" , page.collection | first -%}
+	{%- assign _sections = _collection.docs | sort: 'order' -%}
+{%- else -%}
+  {%- assign _collection = site.collections | where: "label" , "sections" | first -%}
+	{%- assign _sections = nil -%}
+{%- endif -%}
+{%- include header.html items_nav=_sections linktofullpage= true -%}
+
+
+<style>
+  .pubitem {
+  margin: 2em 0;
+  line-height: 1em;
+}
+
+.pubteaser img {
+  width: 200px;
+  border: 2px solid black;
+}
+
+p + ul {
+    margin-top: -40px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    }
+
+.pubtitle {
+  margin-bottom: .5em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+.pubauthors, .pubinfo {
+  font-size: 75%;
+  margin-bottom: .75em;
+}
+.pubteaser {
+  clear: both;
+}
+
+.pubteaser a {
+  float: left;
+  margin-right: 2em;
+}
+
+.publication-teaser img {
+  width: 400px;
+  border: 2px solid black;
+}
+.publinks {
+  font-size: 75%;
+}
+.abstract {
+  font-style: normal;
+}
+.position: {
+  font-size: 10%;
+}
+
+.section-title, .container-block-title {
+  margin-bottom: 1cm;
+}
+
+</style>
+
+<!-- Main -->
+<div id="main">
+	<!-- Post -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><a href="{{- page.url -}}">{{- page.name -}}</a></h2>
+				<div class="publication-authors">
+    {{ page.authors }}
+  </div>
+  <div class="position">
+    {%- if page.position == "groupleader" -%}
+       {%- assign _title = "Group Leader" -%}
+      {%- endif -%}
+      {%- if page.position == "postdoc" -%}
+       {%- assign _title = "Postdoc" -%}
+      {%- endif -%}
+      {%- if page.position == "phd" -%}
+       {%- assign _title = "PhD Student" -%}
+      {%- endif -%}
+      {%- if page.position == "student" -%}
+       {%- assign _title = "Student" -%}
+      {%- endif -%}
+    {{_title}}
+  </div>
+  <br><br>
+  <div class="publication-teaser">
+    <p style="float: left"><img src="/images/{{ page.slug }}.png" alt="project teaser" style="margin: 30px"></p>
+    {%- assign stem="data_" | append: page.slug -%}
+    {% assign career-profile = site.data[stem].career-profile %}
+      {% if career-profile %}
+      <section class="section summary-section">
+      
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+          </span>
+          {{ career-profile.title }}
+        </h2>
+        <div class="summary">
+          {{ career-profile.summary | markdownify }}
+        </div><!--//summary-->
+          
+      </section><!--//section-->
+      {% endif %}
+  </div>
+  
+  <br>
+  </header>
+
+  
+
+  
+  
+  
+  <h2 id="downloads">Links</h2>
+
+   <div class="publinks">
+        {%- if page.github -%}
+         <a href={{page.github}}><i class="fab fa-github"></i> GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        {%- endif -%}
+        
+        {%- if page.twitter -%}
+         <a href={{page.twitter}}><i class="fab fa-twitter"></i> Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        {%- endif -%}
+        
+        {%- if page.researchgate -%}
+         <a href={{page.researchgate}}><i class="fab fa-researchgate"></i> ResearchGate</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        {%- endif -%}
+        
+        {%- if page.googlescholar -%}
+         <a href={{page.googlescholar}}><i class="fab fa-google"></i> Google Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        {%- endif -%}
+        
+        {%- if page.linkedin -%}
+         <a href={{page.linkedin}}><i class="fab fa-linkedin-in"></i> LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        {%- endif -%}
+        
+        </div>
+    </div>
+    </article>
+
+    <!--
+    {%- capture _excerpt -%}
+    {%- assign stem="data_" | append: page.slug -%}
+    {% assign career-profile = site.data[stem].career-profile %}
+      {% if career-profile %}
+      <section class="section summary-section">
+      
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+          </span>
+          {{ career-profile.title }}
+        </h2>
+        <div class="summary">
+          {{ career-profile.summary | markdownify }}
+        </div>
+          
+      </section>
+      {% endif %}
+      {%- endcapture -%}
+      {%- assign _content = _excerpt | append: _link -%}
+      {%- assign len = _content.size -%}
+      {%- if len >5 -%}
+      {%- include career-profile.html content=_content -%}
+      {%- endif -%} -->
+
+
+
+    {%- capture _excerpt -%}
+    {% assign interests = site.data[stem].sidebar.research_interests %}
+    {% if interests %}
+    <div class="row">
+    <div class="column">
+    <div class="interests-container container-block">
+
+      <h2 class="container-block-title">
+        Research Interests
+      </h2>
+
+      <ul class="list-unstyled interests-list">
+        {% for interest in interests %}
+
+          {% if interest.link %}
+          <li><a href="{{ interest.link }}">{{ interest.item }}</a></li>
+          {% else %}
+          <li>{{ interest.item }}</li>
+          {% endif %}
+
+        {% endfor %}
+      </ul>
+  
+    </div><!--//interests-->
+    {% endif %}
+    </div>
+    {% assign interests = site.data[stem].sidebar.interests %}
+    {% if interests %}
+    <div class="column">
+    <div class="interests-container container-block">
+
+      <h2 class="container-block-title">
+        Other Interests
+      </h2>
+
+      <ul class="list-unstyled interests-list">
+        {% for interest in interests %}
+
+          {% if interest.link %}
+          <li><a href="{{ interest.link }}">{{ interest.item }}</a></li>
+          {% else %}
+          <li>{{ interest.item }}</li>
+          {% endif %}
+
+        {% endfor %}
+      </ul>
+
+    </div><!--//interests-->
+    </div>
+    </div>
+    
+    {% endif %}
+    {%- endcapture -%}
+      {%- assign _content = _excerpt | append: _link -%}
+      {%- assign len = _content.size -%}
+      {%- if len >5 -%}
+      {%- include career-profile.html content=_content -%}
+      {%- endif -%}
+
+
+
+
+    
+
+
+
+    {%- capture _excerpt -%}
+    {% assign publications = site.data[stem].publications %}
+    {% if publications %}
+    <section class="section publications-section">
+
+      <h2 class="section-title">
+        <span class="fa-stack fa-xs">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
+        </span>
+        {{ publications.title }}
+      </h2>
+
+      {% if publications.intro %}
+      <div class="intro">
+        {{ publications.intro | markdownify }}
+      </div><!--//intro-->
+      {% endif %}
+
+      {% for publication in publications.papers %}
+      {%- assign pub=site.publications[publication.token] -%}
+      {% assign publications = site.publications | reverse %}
+      {% for pub in publications %}
+      {%- if pub.slug==publication.token -%}
+        <div class="pubitem">
+          <div class="pubteaser">
+          <a href="{{pub.url}}">
+            <img src="../images/{{ pub.slug }}_small.png" alt="{{pub.slug}} publication teaser"/>
+          </a>
+        </div>
+          <div class="pubtitle">
+            {{ pub.title }}
+          </div>
+          <div class="pubauthors">
+            {{ pub.authors }}
+          </div>
+          <div class="pubinfo">
+            {{ pub.publication }}, {{ pub.year}}
+          </div>
+          <div class="publinks">
+          <a href="{{pub.url}}">&lt;&lt; read more &gt;&gt;</a>
+        </div>
+        </div>
+      {%- endif -%}
+      {% endfor %}
+      
+      
+      
+      {% endfor %}
+
+    </section><!--//section-->
+    {% endif %}
+    {%- endcapture -%}
+    {%- assign _content = _excerpt | append: _link -%}
+      {%- assign len = _content.size -%}
+      {%- if len >5 -%}
+      {%- include career-profile.html content=_content -%}
+      {%- endif -%}
+
+
+
+    {%- capture _excerpt -%}
+    {% assign education = site.data[stem].education %}
+    {% if education %}
+      <section class="section educations-section">
+
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-graduation-cap fa-stack-1x fa-inverse"></i>
+          </span>
+          Education
+        </h2>
+
+        {% for graduation in education %}
+        <div class="item">
+
+          <div class="meta">
+            
+            <div class="upper-row">
+              <h3 class="pubtitle" style="font-size: 120%">{{ graduation.degree }}</h3>
+              <div class="time">{{ graduation.time }}</div>
+            </div><!--//upper-row-->
+
+            <div class="university" style="margin-bottom:0.3cm;">{{ graduation.university }}</div>
+          </div><!--//meta-->
+
+          {% if graduation.details %}
+          <div class="details">
+            {{ graduation.details | markdownify }}
+          </div><!--//details-->
+          {% endif %}
+
+        </div><!--//item-->
+        {% endfor %}
+
+      </section><!--//section-->
+    {% endif %}
+    {%- endcapture -%}
+    {%- assign _content = _excerpt | append: _link -%}
+      {%- assign len = _content.size -%}
+      {%- if len >5 -%}
+      {%- include career-profile.html content=_content -%}
+      {%- endif -%}
+
+
+
+    {%- capture _excerpt -%}
+    {% assign experiences = site.data[stem].experiences %}
+    {% if experiences %}
+    <section class="section experiences-section">
+      <h2 class="section-title">
+        <span class="fa-stack fa-xs">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-briefcase fa-stack-1x fa-inverse"></i>
+        </span>
+        Experiences
+      </h2>
+
+      {% for experience in experiences %}
+      <div class="item">
+
+        <div class="meta">
+
+          <div class="upper-row">
+            <h3 class="pubtitle" style="font-size: 120%">{{ experience.role }}</h3>
+            <div class="time">{{ experience.time }}</div>
+          </div><!--//upper-row-->
+
+          <div class="company" style="margin-bottom:0.3cm;">{{ experience.company }}</div>
+
+        </div><!--//meta-->
+
+        {% if experience.details %}
+        
+        <div class="details">
+          {{ experience.details | markdownify }}
+        </div><!--//details-->
+        {% endif %}
+        
+
+      </div><!--//item-->
+      {% endfor %}
+
+    </section><!--//section-->
+    {% endif %}
+    {%- endcapture -%}
+    {%- assign _content = _excerpt | append: _link -%}
+      {%- assign len = _content.size -%}
+      {%- if len >5 -%}
+      {%- include career-profile.html content=_content -%}
+      {%- endif -%}
+
+
+
+
+
+    {%- capture _excerpt -%}
+    {% assign projects = site.data[stem].projects %}
+    {% if projects %}
+    <section class="section projects-section">
+
+      <h2 class="section-title">
+        <span class="fa-stack fa-xs">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
+        </span>
+        {{ projects.title }}
+      </h2>
+
+      {% if projects.intro %}
+      <div class="intro">
+          <p>{{ projects.intro }}</p>
+      </div><!--//intro-->
+      {% endif %}
+
+      {% for project in projects.assignments %}
+        <div class="item">
+
+          <span class="pubtitle" style="font-size: 100%">
+            {% if project.link %}
+            <a href="{{ project.link }}" target="_blank"><b>{{ project.title }}</b></a>
+            {% else %}
+            {{ project.title }}
+            {% endif %}
+          </span>
+
+          {% if project.tagline %}
+          - <span class="project-tagline">{{ project.tagline }}</span>
+          {% endif %}
+
+        </div><!--//item-->
+      {% endfor %}
+
+    </section><!--//section-->
+    {% endif %}
+    {%- endcapture -%}
+      {%- assign _content = _excerpt | append: _link -%}
+      {%- assign len = _content.size -%}
+      {%- if len >5 -%}
+      {%- include career-profile.html content=_content -%}
+      {%- endif -%}
+
+
+    {%- capture _excerpt -%}
+    {% assign skills = site.data[stem].skills %}
+    {% if skills %}
+    <section class="skills-section section">
+
+      <h2 class="section-title">
+        <span class="fa-stack fa-xs">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
+        </span>
+        {{ skills.title }}
+      </h2>
+
+      <div class="skillset">
+
+        {% for skill in skills.toolset %}
+        <div class="item">
+
+          <h3 class="level-title">{{ skill.name }}</h3>
+
+          <div class="level-bar">
+            <div class="level-bar-inner" data-level="{{ skill.level }}">
+            </div>
+          </div><!--//level-bar-->
+
+        </div><!--//item-->
+        {% endfor %}
+
+      </div>
+
+    </section><!--//skills-section-->
+    {% endif %}
+    {%- endcapture -%}
+
+      {%- assign _content = _excerpt | append: _link -%}
+      {%- assign len = _content.size -%}
+      {%- if len >5 -%}
+      {%- include career-profile.html content=_content -%}
+      {%- endif -%}
+
+    
+        {%- capture _excerpt -%}
+    {% assign languages = site.data[stem].sidebar.languages %}
+    {% if languages %}
+    <div class="languages-container container-block">
+
+      <h2 class="container-block-title">
+        Languages
+      </h2>
+
+      <ul class="list-unstyled interests-list">
+        {%for language in languages %}
+        <li>
+          {{ language.idiom }}
+          <span class="lang-desc">({{ language.level }})</span>
+        </li>
+        {% endfor %}
+      </ul>
+
+    </div><!--//interests-->
+    {% endif %}
+    {%- endcapture -%}
+    {%- assign _content = _excerpt | append: _link -%}
+      {%- assign len = _content.size -%}
+      {%- if len >5 -%}
+      {%- include career-profile.html content=_content -%}
+      {%- endif -%}
+    
+    
+	  </div>
+	  
+	
+</div>
+
+
+

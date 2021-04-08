@@ -1,0 +1,637 @@
+<!DOCTYPE HTML>
+<!--
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+Changes to improve functionality by Fernando Ariznavarreta | github.com/ariznaf
+-->
+<html><head><!-- Robots -->
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="/people/sophia" /><!-- Title, description, author --><title>Sophia Wagner | Peng Lab - AI for Microscopy and Computational Pathology</title>
+  <meta name="description" content="The Peng Lab, as part of Helmholtz AI, is working on the development of AI methods for various microscopy modalities and computational pathology.  " />
+  <meta name="author" content="Lorenz Lamm" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sophia Wagner | Peng Lab - AI for Microscopy and Computational Pathology" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/avatar.jpg" />
+  <meta property="og:url" content="/people/sophia" />
+  <meta property="og:site_name" content="Peng Lab" />
+  <meta property="og:description" content="The Peng Lab, as part of Helmholtz AI, is working on the development of AI methods for various microscopy modalities and computational pathology.  " />
+
+  <!-- Styles -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js" defer></script><![endif]-->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+  <script src="/assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="/assets/js/jquery.scrollzer.min.js" defer></script>
+  <script src="/assets/js/skel.min.js" defer></script>
+  <script src="/assets/js/util.js" defer></script>
+  <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js" defer></script><![endif]-->
+  <script src="/assets/js/main.js" defer></script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: 'none',
+    tex2jax: {
+      inlineMath: [['$','$']],
+      displayMath: [['$$','$$']],
+      processEnvironments: false
+    },
+    // show equation numbers
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    'HTML-CSS': {
+      imageFont: null
+    }
+  });
+</script></head>
+<body><!-- get the label to use in read more links if one is configured in _config.yml --><!-- Header -->
+<div id="header">
+  <div class="top"><!-- Logo -->
+<div id="logo">
+  <a href="/" id="home-link">
+    <span class="image avatar48"><img src="/assets/images/avatar.jpg" alt="Avatar of Lorenz Lamm" /></span>
+    <h1 id="title">Peng Lab</h1>
+    <p>AI for Microscopy and Computational Pathology</p>
+  </a>
+</div>
+<!-- NavRoot -->
+<nav id="nav">
+  <ul><li><a href="/" id="about-link">
+            <span class="icon fa-home">About</span>
+          </a></li><li><a href="/pubs" id="publications-link">
+            <span class="icon fa-book">Publications</span>
+          </a></li><li><a href="/team" id="team-link">
+            <span class="icon fa-book">Team</span>
+          </a></li><li><a href="/blog" id="news-cv-link">
+            <span class="icon fa-pencil-alt">News / CV?</span>
+          </a></li></ul>
+</nav>
+<hr><!-- NavList -->
+  <nav id="nav">
+    <ul><li><a href="/people/lorenz"id="lorenz-lamm-link" class="scrolly"><span class="icon fa-file">Lorenz Lamm</span></a>
+    </li><li><a href="/people/sophia"id="sophia-wagner-link" class="scrolly"><span class="icon fa-file">Sophia Wagner</span></a>
+    </li><li><a href="/people/tingying"id="dr-tingying-peng-link" class="scrolly"><span class="icon fa-file">Dr. Tingying Peng</span></a>
+    </li></ul>
+  </nav></div>
+  <div class="bottom"><!-- Social Icons -->
+<ul class="icons"><li><a href="https://twitter.com/p_tingying" class="icon-b fa-twitter"><span class="label">Twitter</span></a></li><li><a href="https://github.com/peng-lab" class="icon-b fa-github"><span class="label">GitHub</span></a></li><li><a href="lorenz.lamm@helmholtz-muenchen.de" class="icon fa-envelope"><span class="label">Email</span></a></li></ul>
+</div>
+</div>
+<style>
+  .pubitem {
+  margin: 2em 0;
+  line-height: 1em;
+}
+
+.pubteaser img {
+  width: 200px;
+  border: 2px solid black;
+}
+
+p + ul {
+    margin-top: -40px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    }
+
+.pubtitle {
+  margin-bottom: .5em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+.pubauthors, .pubinfo {
+  font-size: 75%;
+  margin-bottom: .75em;
+}
+.pubteaser {
+  clear: both;
+}
+
+.pubteaser a {
+  float: left;
+  margin-right: 2em;
+}
+
+.publication-teaser img {
+  width: 400px;
+  border: 2px solid black;
+}
+.publinks {
+  font-size: 75%;
+}
+.abstract {
+  font-style: normal;
+}
+.position: {
+  font-size: 10%;
+}
+
+.section-title, .container-block-title {
+  margin-bottom: 1cm;
+}
+
+</style>
+
+<!-- Main -->
+<div id="main">
+	<!-- Post -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2><a href="/people/sophia">Sophia Wagner</a></h2>
+				<div class="publication-authors">
+    
+  </div>
+  <div class="position">PhD Student
+  </div>
+  <br><br>
+  <div class="publication-teaser">
+    <p style="float: left"><img src="/images/sophia.png" alt="project teaser" style="margin: 30px"></p>
+      
+      <section class="section summary-section">
+      
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+          </span>
+          Career Profile
+        </h2>
+        <div class="summary">
+          <p>Wgus us ugh
+Second paragraph if required.</p>
+
+        </div><!--//summary-->
+          
+      </section><!--//section-->
+      
+  </div>
+  
+  <br>
+  </header>
+
+  
+
+  
+  
+  
+  <h2 id="downloads">Links</h2>
+
+   <div class="publinks"><a href=http://dx.doi.org/XX.XXX/><i class="fab fa-twitter"></i> Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    </div>
+    </article>
+
+    <!--<section id="untitled" class="shade-two">
+  <div class="container">
+      
+      <section class="section summary-section">
+      
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+          </span>
+          Career Profile
+        </h2>
+        <div class="summary">
+          <p>Wgus us ugh
+Second paragraph if required.</p>
+
+        </div>
+          
+      </section>
+      </div>
+</section>--><section id="untitled" class="shade-three">
+  <div class="container">
+    
+    </div>
+    
+    
+    <div class="column">
+    <div class="interests-container container-block">
+
+      <h2 class="container-block-title">
+        Other Interests
+      </h2>
+
+      <ul class="list-unstyled interests-list">
+        
+
+          
+          <li>Climbing</li>
+          
+
+        
+
+          
+          <li>Snowboarding</li>
+          
+
+        
+
+          
+          <li>Cooking</li>
+          
+
+        
+      </ul>
+
+    </div><!--//interests-->
+    </div>
+    </div>
+    
+    </div>
+</section><section id="untitled" class="shade-four">
+  <div class="container">
+    
+    <section class="section publications-section">
+
+      <h2 class="section-title">
+        <span class="fa-stack fa-xs">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
+        </span>
+        Publications
+      </h2>
+
+      
+      <div class="intro">
+        <p>You can list your publications in this section. Lorem ipsum dolor sit
+amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
+bibendum fringilla a eu lectus.</p>
+
+      </div><!--//intro-->
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </section><!--//section-->
+    </div>
+</section><section id="untitled" class="shade-three">
+  <div class="container">
+    
+      <section class="section educations-section">
+
+        <h2 class="section-title">
+          <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-graduation-cap fa-stack-1x fa-inverse"></i>
+          </span>
+          Education
+        </h2>
+
+        
+        <div class="item">
+
+          <div class="meta">
+            
+            <div class="upper-row">
+              <h3 class="pubtitle" style="font-size: 120%">MSc in Computer Science</h3>
+              <div class="time">2011 - 2012</div>
+            </div><!--//upper-row-->
+
+            <div class="university" style="margin-bottom:0.3cm;">University of London</div>
+          </div><!--//meta-->
+
+          
+          <div class="details">
+            <p>Describe your study here lorem ipsum dolor sit amet, consectetuer
+adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+sociis natoque penatibus et magnis dis parturient montes, nascetur
+ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+pretium quis, sem.</p>
+<ul>
+  <li>Bullet point</li>
+  <li>Bullet point</li>
+</ul>
+
+          </div><!--//details-->
+          
+
+        </div><!--//item-->
+        
+        <div class="item">
+
+          <div class="meta">
+            
+            <div class="upper-row">
+              <h3 class="pubtitle" style="font-size: 120%">BSc in Applied Mathematics</h3>
+              <div class="time">2007 - 2011</div>
+            </div><!--//upper-row-->
+
+            <div class="university" style="margin-bottom:0.3cm;">Bristol University</div>
+          </div><!--//meta-->
+
+          
+          <div class="details">
+            <p>Describe your study here lorem ipsum dolor sit amet, consectetuer
+adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+sociis natoque penatibus et magnis dis parturient montes, nascetur
+ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+pretium quis, sem.</p>
+<ul>
+  <li>Bullet point</li>
+  <li>Bullet point</li>
+</ul>
+
+          </div><!--//details-->
+          
+
+        </div><!--//item-->
+        
+
+      </section><!--//section-->
+    </div>
+</section><section id="untitled" class="shade-two">
+  <div class="container">
+    
+    <section class="section experiences-section">
+      <h2 class="section-title">
+        <span class="fa-stack fa-xs">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-briefcase fa-stack-1x fa-inverse"></i>
+        </span>
+        Experiences
+      </h2>
+
+      
+      <div class="item">
+
+        <div class="meta">
+
+          <div class="upper-row">
+            <h3 class="pubtitle" style="font-size: 120%">Lead Developer</h3>
+            <div class="time">2015 - Present</div>
+          </div><!--//upper-row-->
+
+          <div class="company" style="margin-bottom:0.3cm;">Startup Hubs, San Francisco</div>
+
+        </div><!--//meta-->
+
+        
+        
+        <div class="details">
+          <p>Describe your role here lorem ipsum dolor sit amet, consectetuer
+adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+Cum sociis natoque penatibus et magnis dis parturient montes,
+nascetur ridiculus mus. Donec quam felis, ultricies nec,
+pellentesque eu, pretium quis, sem. Nulla consequat massa quis
+enim. Donec pede justo. Sed ut perspiciatis unde omnis iste natus
+error sit voluptatem accusantium doloremque laudantium, totam rem
+aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+architecto beatae vitae dicta sunt explicabo.</p>
+<ul>
+  <li>Bullet point</li>
+  <li>Bullet point</li>
+</ul>
+
+        </div><!--//details-->
+        
+        
+
+      </div><!--//item-->
+      
+      <div class="item">
+
+        <div class="meta">
+
+          <div class="upper-row">
+            <h3 class="pubtitle" style="font-size: 120%">Senior Software Engineer</h3>
+            <div class="time">2014 - 2015</div>
+          </div><!--//upper-row-->
+
+          <div class="company" style="margin-bottom:0.3cm;">Google, London</div>
+
+        </div><!--//meta-->
+
+        
+        
+        <div class="details">
+          <p>Describe your role here lorem ipsum dolor sit amet, consectetuer
+adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+Cum sociis natoque penatibus et magnis dis parturient montes,
+nascetur ridiculus mus. Donec quam felis, ultricies nec,
+pellentesque eu, pretium quis, sem.</p>
+<ul>
+  <li>Bullet point</li>
+  <li>Bullet point</li>
+</ul>
+
+        </div><!--//details-->
+        
+        
+
+      </div><!--//item-->
+      
+      <div class="item">
+
+        <div class="meta">
+
+          <div class="upper-row">
+            <h3 class="pubtitle" style="font-size: 120%">UI Developer</h3>
+            <div class="time">2012 - 2014</div>
+          </div><!--//upper-row-->
+
+          <div class="company" style="margin-bottom:0.3cm;">Amazon, London</div>
+
+        </div><!--//meta-->
+
+        
+        
+        <div class="details">
+          <p>Describe your role here lorem ipsum dolor sit amet, consectetuer
+adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+Cum sociis natoque penatibus et magnis dis parturient montes,
+nascetur ridiculus mus. Donec quam felis, ultricies nec,
+pellentesque eu, pretium quis, sem.</p>
+<ul>
+  <li>Bullet point</li>
+  <li>Bullet point</li>
+</ul>
+
+        </div><!--//details-->
+        
+        
+
+      </div><!--//item-->
+      
+
+    </section><!--//section-->
+    </div>
+</section><section id="untitled" class="shade-three">
+  <div class="container">
+    
+    <section class="section projects-section">
+
+      <h2 class="section-title">
+        <span class="fa-stack fa-xs">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
+        </span>
+        Projects
+      </h2>
+
+      
+      <div class="intro">
+          <p>You can list your side projects or open source libraries in this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+</p>
+      </div><!--//intro-->
+      
+
+      
+        <div class="item">
+
+          <span class="pubtitle" style="font-size: 100%">
+            
+            <a href="#hook" target="_blank"><b>Velocity</b></a>
+            
+          </span>
+
+          
+          - <span class="project-tagline">A responsive website template designed to help startups promote, market and sell their products.</span>
+          
+
+        </div><!--//item-->
+      
+        <div class="item">
+
+          <span class="pubtitle" style="font-size: 100%">
+            
+            <a href="#" target="_blank"><b>DevStudio</b></a>
+            
+          </span>
+
+          
+          - <span class="project-tagline">A responsive website template designed to help web developers/designers market their services.</span>
+          
+
+        </div><!--//item-->
+      
+        <div class="item">
+
+          <span class="pubtitle" style="font-size: 100%">
+            
+            <a href="#" target="_blank"><b>Tempo</b></a>
+            
+          </span>
+
+          
+          - <span class="project-tagline">A responsive website template designed to help startups promote their products or services and to attract users &amp; investors</span>
+          
+
+        </div><!--//item-->
+      
+        <div class="item">
+
+          <span class="pubtitle" style="font-size: 100%">
+            
+            <a href="#" target="_blank"><b>Atom</b></a>
+            
+          </span>
+
+          
+          - <span class="project-tagline">A comprehensive website template solution for startups/developers to market their mobile apps.</span>
+          
+
+        </div><!--//item-->
+      
+        <div class="item">
+
+          <span class="pubtitle" style="font-size: 100%">
+            
+            <a href="#" target="_blank"><b>Delta</b></a>
+            
+          </span>
+
+          
+          - <span class="project-tagline">A responsive Bootstrap one page theme designed to help app developers promote their mobile apps</span>
+          
+
+        </div><!--//item-->
+      
+
+    </section><!--//section-->
+    </div>
+</section><section id="untitled" class="shade-four">
+  <div class="container">
+    
+    <div class="languages-container container-block">
+
+      <h2 class="container-block-title">
+        Languages
+      </h2>
+
+      <ul class="list-unstyled interests-list">
+        
+        <li>
+          French
+          <span class="lang-desc">(Native)</span>
+        </li>
+        
+        <li>
+          French
+          <span class="lang-desc">(Professional)</span>
+        </li>
+        
+        <li>
+          Spanish
+          <span class="lang-desc">(Professional)</span>
+        </li>
+        
+      </ul>
+
+    </div><!--//interests-->
+    </div>
+</section></div>
+	  
+	
+</div>
+
+
+
+<!-- Footer -->
+<div id="footer">
+
+  <!-- Copyright -->
+  <ul class="copyright">
+    
+      <li>&copy;Peng Lab. All rights reserved.</li>
+    
+    <li>theme home: <a href="https://github.com/ariznaf/jekyll-theme-advanced-prologue">Ariznaf jekyll themes</a></li>
+  </ul>
+
+</div>
+</body>
+</html>

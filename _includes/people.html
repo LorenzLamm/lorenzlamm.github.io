@@ -1,0 +1,76 @@
+{%- comment -%}
+  Include vars:
+	class: position of member (groupleader, postdoc, phd, student)
+  subtitle
+	photo
+	photo-alt
+	auto-header
+	content
+	joined: year of joining the group
+	topics: topics that are worked on
+  collection: collection to which the section belongs.
+  categories: List of categories the section belongs to.
+  linktofullpage: if true, links are url to the full page, if false are slug bookmarks in current page
+{%- endcomment -%}
+
+
+{%- if include.class == "groupleader" -%}
+ {%- assign _title = "Group Leader" -%}
+{%- endif -%}
+{%- if include.class == "postdoc" -%}
+ {%- assign _title = "Postdocs" -%}
+{%- endif -%}
+{%- if include.class == "phd" -%}
+ {%- assign _title = "PhD Students" -%}
+{%- endif -%}
+{%- if include.class == "student" -%}
+ {%- assign _title = "Students" -%}
+{%- endif -%}
+
+{%- assign _slug = include.name | strip_html | slugify | default: 'untitled' -%}
+{%- if include.photo and include.photo-alt -%}
+	{%- capture _photo -%}
+		<img src="{{- include.photo | relative_url -}}" alt="{{- include.photo-alt -}}" class="back">
+	{%- endcapture -%}
+	{%- assign _class = 'shade-one cover dark' -%}
+{%- else -%}
+	{%- assign _photo = '' -%}
+	{%- capture _class -%}shade-{%- cycle 'two', 'three', 'four', 'three' -%}{%- endcapture -%}
+{%- endif -%}
+
+{%- if include.auto-header == 'none' -%}
+	{%- assign _heading = "" -%}
+{%- else -%}
+  {%- if include.alt_url -%}
+    {%- assign _linkurl= include.alt_url -%}
+  {%- else -%}
+  {%- if linktofullpage -%}
+    {%- assign _linkurl= page.url -%}
+  {%- else -%}
+    {%- assign _linkurl= _slug | prepend: '#' -%}
+  {%- endif -%}
+  {%- endif -%}
+	{%- capture _heading -%}
+		<header>
+			<h2>
+        <a href= "{{ _linkurl }}">
+        {%- if include.auto-header == null or include.auto-header == 'use-title' -%}
+          {{- _title -}}
+        {%- else -%}
+          {{- include.auto-header -}}
+        {%- endif -%}
+        </a>
+      </h2>
+      {%- if include.subtitle -%}<p>{{- include.subtitle -}}</p>{%- endif -%}
+      {%- include categoriesbar.html collection= include.collection categories= include.categories -%}
+		</header>
+	{%- endcapture -%}
+{%- endif -%}
+
+<section id="{{- _slug -}}" class="{{- _class -}}">
+  <div class="container">
+    {{- _photo -}}
+    {{- _heading -}}
+    {{- include.content -}}
+  </div>
+</section>

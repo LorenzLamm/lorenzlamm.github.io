@@ -6,4 +6,5 @@ layout: team
 title: Team
 icon: fa-book
 order: 1
+collection: people
 ---

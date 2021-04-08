@@ -1,0 +1,121 @@
+#
+# Be aware that even a small syntax error here can lead to failures in output.
+#
+
+sidebar:
+    about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
+    education: True # set to False if you want education in main section instead of in sidebar
+
+    # Profile information
+    name: Lorenz Lamm
+
+
+    
+    languages:
+      - idiom: German
+        level: Native
+
+      - idiom: English
+        level: Professional
+
+      - idiom: Spanish
+        level: Un poquito
+
+    interests:
+      - item: Beach Volleyball
+        link:
+
+      - item: NBA
+        link:
+
+      - item: Chess
+        link:
+
+      - item: Flamingos
+        link:
+    research_interests:
+      - item: Deep Learning for noisy images
+        link:
+
+      - item: Cryo-Electron tomography
+        link:
+
+      - item: Computer Vision
+        link:
+
+      - item: Digital Pathology
+        link:
+     
+
+career-profile:
+    title: Profile
+    summary: |
+      I am a PhD student, shared between the Peng lab and the<a href="https://www.cellarchlab.com/"> Engel lab</a>. The aim of this PhD project is to develop Deep Learning methods to make the analysis of 3D Cryo-electron tomography more efficient.
+
+      As an application, we are analyzing plant cells, in particular those parts of the chloroplasts that are involved in photosynthesis. For this, we need to have accurate 3D segmentations of the thylakoid membranes, as well as precise localizations of the single proteins contained in these membranes, for example Photosystem-II complexes.
+education:
+    - degree: MSc Mathematics (1.4)
+      university: Technical University Munich
+      time: 2017 - 2020
+      details: |
+        <i>Focus on mathematical foundations, as well as data science, in particular computer vision, machine learning and deep learning, and their application in biomedical settings.</i> <br>Excerpt of courses:
+        - Mathematical Foundations of Machine Learning
+        - Advanced Deep Learning For Computer Vision
+        - Computational Pathology: Algorithms and Applications
+        - Machine Learning / Convex Optimization for Computer Vision (2 courses)
+
+    - degree: BSc Mathematics (1.4)
+      university: University Regensburg
+      time: 2013 - 2016
+      details: |
+        <i>Learning the mathematical foundations, like Analysis (I-IV), (Linear) Algebra, Probability Theory, Numerics, ...</I> 
+experiences:
+    - role: PhD Student
+      time: 2020 - Present
+      company: Helmholtz AI / Helmholtz Pioneer Campus
+      details: |
+        <i>Development of Deep Learning methods for the analysis of Cryo-electron tomography.</i>
+          - Computer Vision for 3D volumetric data
+          - Dealing with noisy, incomplete, sparsely labeled data
+    - role: Research Assistent
+      time: 2019 - 2020
+      company: Institute for Computational Biology, Helmholtz Zentrum München
+      details: |
+        <p><I>Assisting Dr. Tingying Peng with the BaSiC shading correction tool.</i><ul>
+          <li>- Maintaining of code, solving user issues
+          <li>- Adding new functionalities (Java)
+          - Converting to new framework (from MatLab to Python)
+    - role: Business Analyst (Intern)
+      time: 2017 (3 months)
+      company: Mücke, Sturm and Company, München
+      details: |
+        <I>Internship in a management consulting company.</I>
+        * Acquisition of efficient working methods
+        * Learning of customer-based thinking
+projects:
+    title: Projects and Collaborations
+    intro: 
+    assignments:
+      - title: MemBrain
+        link:
+        tagline: "A Deep Learning-based pipeline for the automated detection of membrane-bound proteins in Cryo-Electron tomography"
+
+      - title: ADL4CV
+        link: 
+        tagline: "In this university project for the course <i>Advanced Deep Learning for Computer Vision</i>, we re-implemented a point cloud semantic segmentation architecture (PointNet++) and investigated how this can benefit from adding information from 2D images showing the same scene."
+
+      - title: Acne Detection
+        link: 
+        tagline: "Together with a Chinese company, I developed Deep Learning methods to automatically detect acne spots in human face images."
+
+
+publications:
+    title: Publications
+    intro: 
+    papers:
+      - token: basic_2
+
+
+
+footer: >
+    Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>

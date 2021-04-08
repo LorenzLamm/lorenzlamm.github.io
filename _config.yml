@@ -104,6 +104,8 @@ collections:
     output: true
   publications:
     output: true
+  people:
+    output: true
 
 theme-options:
   #text to show in the read me links after exerpts

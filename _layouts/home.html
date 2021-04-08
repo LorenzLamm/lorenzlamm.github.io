@@ -86,8 +86,8 @@ layout: default
         {{ _section.publication }}, {{ _section.year}}
       </div>
       <div class="publinks">
-      <a href="/download/{{ _section.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-      <a href="{{- _section.url -}}"><i class="fas fa-link"></i> Project Page</a>&nbsp;&nbsp;
+      <a href={{_section.doi}}><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+      {%- if _section.code -%} <a href="{{- _section.code -}}"><i class="fas fa-code"></i> Code</a>&nbsp;&nbsp; {%- endif -%}
       
       </div>
       <br>
