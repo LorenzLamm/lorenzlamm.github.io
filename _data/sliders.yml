@@ -15,9 +15,9 @@
       alt: image two
       title: BaSiC ++
       href: publications/basic_2
-    - src: /images/BaSiC_kidney_squared.png
-      data-src: /images/BaSiC_kidney_squared.png
-      data-src-2x: /images/BaSiC_kidney_squared.png
+    - src: /images/basic_2.png
+      data-src: /images/basic_2.png
+      data-src-2x: /images/basic_2.png
       alt: image thss
       title: Multi-task k-NN
       href: publications/multi-task-knn
