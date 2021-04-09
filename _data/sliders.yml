@@ -1,0 +1,26 @@
+# example slider
+- selector: example_slider
+  captions: true
+  bullets: true
+  images:
+    - src: /images/BaSiC_brain_cut.png
+      data-src: /images/BaSiC_brain_cut.png
+      data-src-2x: /images/BaSiC_brain_cut.png
+      alt: image one
+      title: BaSiC
+      href: publications/basic
+    - src: /images/BaSiC_kidney.png
+      data-src: /images/BaSiC_kidney.png
+      data-src-2x: /images/BaSiC_kidney.png
+      alt: image two
+      title: BaSiC ++
+      href: publications/basic_2
+    - src: /images/BaSiC_kidney_squared.png
+      data-src: /images/BaSiC_kidney_squared.png
+      data-src-2x: /images/BaSiC_kidney_squared.png
+      alt: image thss
+      title: Multi-task k-NN
+      href: publications/multi-task-knn
+  settings:
+    height: "'auto'"
+    effect: "'fade'"

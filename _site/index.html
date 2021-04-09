@@ -137,7 +137,40 @@ Changes to improve functionality by Fernando Ariznavarreta | github.com/ariznaf
 <!-- Main -->
 <div id="main"><!-- Sections -->
 	<section id="group-aims" class="shade-one cover dark">
-  <div class="container"><img src="/assets/images/banner.jpg" alt="example cover photo" class="back"><header>
+  <div class="container"><img src="/assets/images/banner.jpg" alt="example cover photo" class="back"><head>
+  <!-- Jekyll Ideal Image Slider Include -->
+<!-- https://github.com/jekylltools/jekyll-ideal-image-slider-include -->
+<!-- v1.8 -->
+<link rel="stylesheet" href="/assets/css/slider/ideal-image-slider.css">
+<link rel="stylesheet" href="/assets/css/slider/themes/default.css">
+</head>
+<body>
+   <center><h2 class="alt"><strong>Publications</strong></h2></center>
+<!-- Jekyll Ideal Image Slider Include -->
+<!-- https://github.com/jekylltools/jekyll-ideal-image-slider-include -->
+<!-- v1.8 -->
+
+<style>
+  .slider_class{
+  max-width: 800px;
+	margin: 50px auto;
+}
+
+  
+</style><div id="example_slider" class="slider_class">
+  <a href="publications/basic"><img data-src="/images/BaSiC_brain_cut.png" data-src-2x="/images/BaSiC_brain_cut.png" src="/images/BaSiC_brain_cut.png" title="BaSiC" alt="image one"></a>
+  <a href="publications/basic_2"><img data-src="/images/BaSiC_kidney.png" data-src-2x="/images/BaSiC_kidney.png" src="/images/BaSiC_kidney.png" title="BaSiC ++" alt="image two"></a>
+  <a href="publications/multi-task-knn"><img data-src="/images/BaSiC_kidney_squared.png" data-src-2x="/images/BaSiC_kidney_squared.png" src="/images/BaSiC_kidney_squared.png" title="Multi-task k-NN" alt="image thss"></a>
+  </div>
+
+
+	<script src="../ideal-image-slider.js"></script>
+	<script>
+	var slider = new IdealImageSlider.Slider('#slider');
+	slider.start();
+	</script>
+
+<header>
   <h2 class="alt"><strong>AI to help Microscopy Image Analysis</strong></h2>
   <p style="text-align:justify;">
   Tingying Peng’s Helmholtz AI young investigator group’s goal to create new AI methods to help life scientists and pathologists to analyze microscopic images more quantitatively and efficiently, allowing them to extract more knowledge. We would like to develop deep learning methods to address several unique challenges for biomedical imaging, including:</p>
@@ -150,11 +183,29 @@ Changes to improve functionality by Fernando Ariznavarreta | github.com/ariznaf
 <p style="text-align:justify;">
 The key research strategy we proposed is interpretable deep learning, which blends domain knowledge such as conventional model-based methods and deep learning-based algorithms in a ‘maximise a posterior’ (MAP) manner. This combined approach will leverage the advantages of both model types allowing us to make more accurate predictions while also shedding light on the underlying mechanisms of neural networks for making those predictions. </p>
 </header>
-
 <footer>
   <a href="#portfolio" class="button scrolly">Portfolio</a>
   <a href="#about" class="button scrolly">About</a>
 </footer>
+<div class=test>
+<img data-src="images/multi-task-knn.png" src="images/multi-task-knn.png" alt="Slide 4"/></div>
+<!-- Jekyll Ideal Image Slider Include -->
+<!-- https://github.com/jekylltools/jekyll-ideal-image-slider-include -->
+<!-- v1.8 -->
+  <script src="/assets/js/slider/ideal-image-slider.min.js"></script>
+  <script src="/assets/js/slider/iis-bullet-nav.js"></script>
+  <script src="/assets/js/slider/iis-captions.js"></script>
+  <script>
+  var example_slider = new IdealImageSlider.Slider({
+      selector: '#example_slider',
+      height: 'auto',
+      effect: 'fade',
+      });
+    example_slider.addBulletNav();
+    example_slider.addCaptions();
+    example_slider.start();
+  </script>
+</body>
 </div>
 </section>
 <section id="research-lines" class="shade-two">

@@ -87,7 +87,9 @@ layout: default
       </div>
       <div class="publinks">
       <a href={{_section.doi}}><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      {%- if _section.code -%} <a href="{{- _section.code -}}"><i class="fas fa-code"></i> Code</a>&nbsp;&nbsp; {%- endif -%}
+      {%- if _section.code -%} <a href="{{- _section.code -}}"><i class="fas fa-code"></i> Code</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {%- endif -%}
+      {%- if _section.code_matlab -%} <a href="{{- _section.code_matlab -}}"><i class="fas fa-code"></i> Code (MatLab)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {%- endif -%}
+      {%- if _section.code_external -%} <a href="{{- _section.code_external -}}"><i class="fas fa-code"></i> Code (external)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {%- endif -%}
       
       </div>
       <br>
