@@ -58,8 +58,11 @@ icon: xxx
     {{ pub.publication }}, {{ pub.year}}
   </div>
   <div class="publinks">
-  <a href="/download/{{ pub.slug}}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
-  <a href="{{pub.url}}"><i class="fas fa-link"></i> Project Page</a>
+  <a href={{pub.doi}}><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="{{pub.url}}"><i class="fas fa-link"></i> Project Page</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  {%- if pub.code_matlab -%} <a href="{{- pub.code_matlab -}}"><i class="fas fa-code"></i> Code (MatLab)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {%- endif -%}
+      {%- if pub.code_external -%} <a href="{{- pub.code_external -}}"><i class="fas fa-code"></i> Code (Python, external)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {%- endif -%}
+      {%- if pub.code_python -%} <a href="{{- pub.code_python -}}"><i class="fas fa-code"></i> Code (Python)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {%- endif -%}
 </div>
 </div>
 {% endfor %}

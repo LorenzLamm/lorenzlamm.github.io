@@ -84,7 +84,14 @@ layout: default
     <a href="{{page.doi}}"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
     {% endif %}
-    {%- if page.code -%} <a href="{{- page.code -}}"><i class="fas fa-code"></i> Code</a>&nbsp;&nbsp; {%- endif -%}</div>
+    {%- if page.code -%} <a href="{{- page.code -}}"><i class="fas fa-code"></i> Code</a>&nbsp;&nbsp; {%- endif -%}
+    
+     {%- if page.code_matlab -%} <a href="{{- page.code_matlab -}}"><i class="fas fa-code"></i> Code (MatLab)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {%- endif -%}
+      {%- if page.code_external -%} <a href="{{- page.code_external -}}"><i class="fas fa-code"></i> Code (Python, external)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {%- endif -%}
+      {%- if page.code_python -%} <a href="{{- page.code_python -}}"><i class="fas fa-code"></i> Code (Python)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {%- endif -%}
+    
+    </div>
+    
   </p>
 
 	</article>

@@ -3,24 +3,33 @@
   captions: true
   bullets: true
   images:
-    - src: /images/BaSiC_brain_cut.png
-      data-src: /images/BaSiC_brain_cut.png
-      data-src-2x: /images/BaSiC_brain_cut.png
-      alt: image one
-      title: BaSiC
+    - src: /images/BaSiC_brain_cut_shaped.png
+      data-src: /images/BaSiC_brain_cut_shaped.png
+      data-src-2x: /images/BaSiC_brain_cut_shaped.png
+      alt: Uncorrected (left) vs. Corrected (right)
+      title: BaSiC Illumination Correction
       href: publications/basic
-    - src: /images/BaSiC_kidney.png
-      data-src: /images/BaSiC_kidney.png
-      data-src-2x: /images/BaSiC_kidney.png
-      alt: image two
-      title: BaSiC ++
-      href: publications/basic_2
-    - src: /images/basic_2.png
-      data-src: /images/basic_2.png
-      data-src-2x: /images/basic_2.png
-      alt: image thss
-      title: Multi-task k-NN
-      href: publications/multi-task-knn
+    - src: /images/BaSiC_kidney_cropped3_shaped.png
+      data-src: /images/BaSiC_kidney_cropped3_shaped.png
+      data-src-2x: /images/BaSiC_kidney_cropped3_shaped.png
+      alt: Uncorrected (left) vs. Corrected (right)
+      title: BaSiC Illumination Correction
+      href: publications/basic
+    - src: /images/WSI_1_shaped.png
+      data-src: /images/WSI_1_shaped.png
+      data-src-2x: /images/WSI_1_shaped.png
+      alt: Entire slide
+      title: Whole Slide Image
+    - src: /images/WSI_2_shaped.png
+      data-src: /images/WSI_2_shaped.png
+      data-src-2x: /images/WSI_2_shaped.png
+      alt: Magnified slide
+      title: Whole Slide Image
+    - src: /images/WSI_3_shaped.png
+      data-src: /images/WSI_3_shaped.png
+      data-src-2x: /images/WSI_3_shaped.png
+      alt: Closeup
+      title: Whole Slide Image
   settings:
     height: "'auto'"
     effect: "'fade'"

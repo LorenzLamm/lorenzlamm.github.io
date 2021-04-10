@@ -16,8 +16,6 @@ image_sliders:
   {% include slider_styles.html %}
 </head>
 <body>
-   <center><h2 class="alt"><strong>Publications</strong></h2></center>
-{% include slider.html selector="example_slider" %}
 
 
 	<script src="../ideal-image-slider.js"></script>
@@ -27,7 +25,8 @@ image_sliders:
 	</script>
 
 <header>
-  <h2 class="alt"><strong>AI to help Microscopy Image Analysis</strong></h2>
+  <center><h2 class="alt"><strong>Peng Lab&nbsp;&nbsp;&nbsp;&nbsp; &mdash; &nbsp;&nbsp;&nbsp;&nbsp;AI to help Microscopy Image Analysis</strong></h2></center>
+{% include slider.html selector="example_slider" %}
   <p style="text-align:justify;">
   Tingying Peng’s Helmholtz AI young investigator group’s goal to create new AI methods to help life scientists and pathologists to analyze microscopic images more quantitatively and efficiently, allowing them to extract more knowledge. We would like to develop deep learning methods to address several unique challenges for biomedical imaging, including:</p>
   <br>
@@ -40,10 +39,9 @@ image_sliders:
 The key research strategy we proposed is interpretable deep learning, which blends domain knowledge such as conventional model-based methods and deep learning-based algorithms in a ‘maximise a posterior’ (MAP) manner. This combined approach will leverage the advantages of both model types allowing us to make more accurate predictions while also shedding light on the underlying mechanisms of neural networks for making those predictions. </p>
 </header>
 <footer>
-  <a href="#portfolio" class="button scrolly">Portfolio</a>
-  <a href="#about" class="button scrolly">About</a>
+  <a href="#research-lines" class="button scrolly">Research Lines</a>
+  <a href="#selected-publications" class="button scrolly">Selected Publications</a>
+  <a href="#contact" class="button scrolly">Contact</a>
 </footer>
-<div class=test>
-<img data-src="images/multi-task-knn.png" src="images/multi-task-knn.png" alt="Slide 4"/></div>
 {% include slider_scripts.html %}
 </body>
