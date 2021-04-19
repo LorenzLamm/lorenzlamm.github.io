@@ -45,11 +45,9 @@ sidebar:
 career-profile:
     title: Profile
     summary: |
-      I am a PhD student supervised by Dr. Tingying Peng and Dr. Melanie Boxberg from the Pathology department at TUM. In my project "Hierarchical and confident deep learning for computer-aided cancer diagnosis", I develop a tool for supporting pathologists in the diagnosis process of colorectal cancer. 
-      
-      The first step deals with the color variability in histopathological imaging data that limits the generalization power of current deep-learning-based methods. 
-
-      I studied Mathematics at Technical University Darmstadt, Université de Bordeaux, and Technical University Munich and completed my Master with a thesis at the Visual Computing and Artifical Intelligence chair of TUM with Prof. Matthias Niessner. 
+      <p style="margin-bottom: 10px">I am a PhD student supervised by Dr. Tingying Peng and Dr. Melanie Boxberg from the Pathology department at TUM. In my project "Hierarchical and confident deep learning for computer-aided cancer diagnosis", I develop a tool for supporting pathologists in the diagnosis process of colorectal cancer. </p>
+      <p style="margin-bottom: 10px">The first step deals with the color variability in histopathological imaging data that limits the generalization power of current deep-learning-based methods. </p>
+      <p>I studied Mathematics at Technical University Darmstadt, Université de Bordeaux, and Technical University Munich and completed my Master with a thesis at the Visual Computing and Artifical Intelligence chair of TUM with Prof. Matthias Niessner. </p>
 
 projects:
     title: Projects and Collaborations
