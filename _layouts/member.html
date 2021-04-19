@@ -99,7 +99,7 @@ p + ul {
   </div>
   <br><br>
   <div class="publication-teaser">
-    <p style="float: left"><img src="/images/{{ page.slug }}.png" alt="project teaser" style="margin-right: 30px; margin-bottom: 2px"></p>
+    <p style="float: left"><img src="/images/{{ page.slug }}.png" alt="project teaser" style="margin-bottom: 0px"></p>
     {%- assign stem="data_" | append: page.slug -%}
     {% assign career-profile = site.data[stem].career-profile %}
       {% if career-profile %}
