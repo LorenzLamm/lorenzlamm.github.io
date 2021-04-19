@@ -7,9 +7,9 @@ position: phd
 topics: AI for Digital Pathology
 joined: 2020
 leave: 
-twitter: http://dx.doi.org/XX.XXX/
+twitter: https://twitter.com/sophiajwagner
 linkedin: 
-github: 
+github: https://github.com/sophiajw
 researchgate:
 googlescholar:
 pic: /images/sophia_small.png
