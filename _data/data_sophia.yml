@@ -7,7 +7,7 @@ sidebar:
     education: True # set to False if you want education in main section instead of in sidebar
 
     # Profile information
-    name: Lorenz Lamm
+    name: Sophia Wagner
 
 
     
@@ -18,104 +18,46 @@ sidebar:
       - idiom: English
         level: Professional
 
-      - idiom: Spanish
-        level: Un poquito
+      - idiom: French
+        level: Fluent
 
     interests:
-      - item: Beach Volleyball
+      - item: Climbing
         link:
 
-      - item: NBA
+      - item: Mountaineering
         link:
 
-      - item: Chess
+      - item: Ecology
         link:
 
-      - item: Flamingos
-        link:
     research_interests:
-      - item: Deep Learning for noisy images
+      - item: Deep Learning for Computational Pathology
         link:
 
-      - item: Cryo-Electron tomography
+      - item: Model Robustness
         link:
 
       - item: Computer Vision
-        link:
-
-      - item: Digital Pathology
         link:
      
 
 career-profile:
     title: Profile
     summary: |
-      I am a PhD student, shared between the Peng lab and the<a href="https://www.cellarchlab.com/"> Engel lab</a>. The aim of this PhD project is to develop Deep Learning methods to make the analysis of 3D Cryo-electron tomography more efficient.
+      I am a PhD student supervised by Dr. Tingying Peng and Dr. Melanie Boxberg from the Pathology department at TUM. In my project "Hierarchical and confident deep learning for computer-aided cancer diagnosis", I develop a tool for supporting pathologists in the diagnosis process of colorectal cancer. 
+      
+      The first step deals with the color variability in histopathological imaging data that limits the generalization power of current deep-learning-based methods. 
 
-      As an application, we are analyzing plant cells, in particular those parts of the chloroplasts that are involved in photosynthesis. For this, we need to have accurate 3D segmentations of the thylakoid membranes, as well as precise localizations of the single proteins contained in these membranes, for example Photosystem-II complexes.
-education:
-    - degree: MSc Mathematics (1.4)
-      university: Technical University Munich
-      time: 2017 - 2020
-      details: |
-        <i>Focus on mathematical foundations, as well as data science, in particular computer vision, machine learning and deep learning, and their application in biomedical settings.</i> <br>Excerpt of courses:
-        - Mathematical Foundations of Machine Learning
-        - Advanced Deep Learning For Computer Vision
-        - Computational Pathology: Algorithms and Applications
-        - Machine Learning / Convex Optimization for Computer Vision (2 courses)
+      I studied Mathematics at Technical University Darmstadt, Université de Bordeaux, and Technical University Munich and completed my Master with a thesis at the Visual Computing and Artifical Intelligence chair of TUM with Prof. Matthias Niessner. 
 
-    - degree: BSc Mathematics (1.4)
-      university: University Regensburg
-      time: 2013 - 2016
-      details: |
-        <i>Learning the mathematical foundations, like Analysis (I-IV), (Linear) Algebra, Probability Theory, Numerics, ...</I> 
-experiences:
-    - role: PhD Student
-      time: 2020 - Present
-      company: Helmholtz AI / Helmholtz Pioneer Campus
-      details: |
-        <i>Development of Deep Learning methods for the analysis of Cryo-electron tomography.</i>
-          - Computer Vision for 3D volumetric data
-          - Dealing with noisy, incomplete, sparsely labeled data
-    - role: Research Assistent
-      time: 2019 - 2020
-      company: Institute for Computational Biology, Helmholtz Zentrum München
-      details: |
-        <p><I>Assisting Dr. Tingying Peng with the BaSiC shading correction tool.</i><ul>
-          <li>- Maintaining of code, solving user issues
-          <li>- Adding new functionalities (Java)
-          - Converting to new framework (from MatLab to Python)
-    - role: Business Analyst (Intern)
-      time: 2017 (3 months)
-      company: Mücke, Sturm and Company, München
-      details: |
-        <I>Internship in a management consulting company.</I>
-        * Acquisition of efficient working methods
-        * Learning of customer-based thinking
 projects:
     title: Projects and Collaborations
     intro: 
     assignments:
-      - title: MemBrain
+      - title: HistAuGAN
         link:
-        tagline: "A Deep Learning-based pipeline for the automated detection of membrane-bound proteins in Cryo-Electron tomography"
-
-      - title: ADL4CV
-        link: 
-        tagline: "In this university project for the course <i>Advanced Deep Learning for Computer Vision</i>, we re-implemented a point cloud semantic segmentation architecture (PointNet++) and investigated how this can benefit from adding information from 2D images showing the same scene."
-
-      - title: Acne Detection
-        link: 
-        tagline: "Together with a Chinese company, I developed Deep Learning methods to automatically detect acne spots in human face images."
-
-
-publications:
-    title: Publications
-    intro: 
-    papers:
-      - token: basic_2
-
-
+        tagline: "Structure-Preserving Multi-Domain Stain Color Augmentation using Style-Transfer with Disentangled Representations "
 
 footer: >
     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
